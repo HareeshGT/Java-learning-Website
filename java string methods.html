@@ -1,0 +1,455 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java string methods</title>
+    <link rel="stylesheet" href="object.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="navigation-bar">
+        <nav class="nav">
+            <div class="container">
+              <h1 class="logo"><a href="#">Java Learner</a></h1>
+              <img src="images\logo.png" alt="logo">
+              <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="text.html"><i class="fa-solid fa-book"></i> Text Content</a></li>
+                <li><a href="videos.html"><i class="fa-solid fa-play"></i> Video Tutorial</a></li>
+                <li><a href="practice code.html"><i class="fa-solid fa-terminal"></i> Practice Problems</a></li>
+                <li><a href="./Compiler Java/index.php"><i class="fa-solid fa-gears" style=" color: #108a00;"></i> Compiler</a></li>
+              </ul>
+            </div>
+          </nav>
+</header>
+<section class="">
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+          <div class="title">Side Menu</div>
+          <ul class="list-items">
+            <li><a href="java basics.html">Java Basics</a></li>
+            <li><a href="ControlStatements.html">Control Statements</a></li>
+            <li><a href="java array.html">Java Array</a></li>
+            <li><a href="java strings.html">Java String</a></li>
+            <li><a href="java string methods.html">Java String Methods</a></li>
+            <li><a href="java object class.html">Java Object Class</a></li>
+            <li><a href="java inheritance.html">Java Inheritance</a></li>
+            <li><a href="java polymorphism.html">Java Polymorphism</a></li>
+            <li><a href="abstraction.html">Java Abstraction</a></li>
+            <li><a href="encapsulation.html">Java Encapsulation</a></li>
+        </ul>
+        </nav>
+      </div>
+</section>
+
+    <section class="obcontent">
+        <br>
+        <!--string methods-->
+        <div>
+            <h1 class="heading-1">String Methods in Java</h1>
+        
+            <h2 class="heading-2">1. length()</h2>
+            <p><strong>Description:</strong> Returns the length of the string.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        int length = str.length(); // Returns 13
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `length()` method returns the number of characters in the string, including spaces and punctuation.</p>
+        
+            <h2 class="heading-2">2. charAt(index)</h2>
+            <p><strong>Description:</strong> Returns the character at the specified index.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        char firstChar = str.charAt(0); // Returns 'H'
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `charAt(index)` method allows you to retrieve the character at the specified index. In Java, indices start from 0.</p>
+        
+            <h2 class="heading-2">3. substring(beginIndex)</h2>
+            <p><strong>Description:</strong> Returns a substring from the specified index to the end.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        String sub1 = str.substring(7); // Returns "World!"
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `substring(beginIndex)` method extracts a substring starting from the specified index until the end of the string.</p>
+        
+            <h2 class="heading-2">4. substring(beginIndex, endIndex)</h2>
+            <p><strong>Description:</strong> Returns a substring from the specified begin index to the specified end index.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        String sub2 = str.substring(0, 5); // Returns "Hello"
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `substring(beginIndex, endIndex)` method extracts a substring from the specified begin index (inclusive) to the specified end index (exclusive).</p>
+        
+            <h2 class="heading-2">5. concat(str)</h2>
+            <p><strong>Description:</strong> Concatenates the specified string to the end of the invoking string.</p>
+            <pre>
+                <code>
+        String firstName = "John";
+        String lastName = "Doe";
+        String fullName = firstName.concat(" ").concat(lastName); // Returns "John Doe"
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `concat(str)` method concatenates the specified string to the end of the current string.</p>
+        
+            <h2 class="heading-2">6. indexOf(str)</h2>
+            <p><strong>Description:</strong> Returns the index of the first occurrence of the specified substring.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        int index = str.indexOf("World"); // Returns 7
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `indexOf(str)` method returns the index of the first occurrence of the specified substring. If not found, it returns -1.</p>
+        
+            <h2 class="heading-2">7. lastIndexOf(str)</h2>
+            <p><strong>Description:</strong> Returns the index of the last occurrence of the specified substring.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        int lastIndex = str.lastIndexOf("l"); // Returns 10
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `lastIndexOf(str)` method returns the index of the last occurrence of the specified substring. If not found, it returns -1.</p>
+        
+            <h2 class="heading-2">8. equals(str)</h2>
+            <p><strong>Description:</strong> Compares the content of two strings for equality.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        boolean isEqual = str.equals("hello, world!"); // Returns false
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `equals(str)` method compares the content of two strings character by character. It is case-sensitive.</p>
+        
+            <h2 class="heading-2">9. equalsIgnoreCase(str)</h2>
+            <p><strong>Description:</strong> Compares the content of two strings for equality, ignoring case.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        boolean isEqualIgnoreCase = str.equalsIgnoreCase("hello, world!"); // Returns true
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `equalsIgnoreCase(str)` method compares the content of two strings for equality without considering the case.</p>
+        
+            <h2 class="heading-2">10. toUpperCase()</h2>
+            <p><strong>Description:</strong> Converts all characters in the string to uppercase.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        String upperCaseStr = str.toUpperCase(); // Returns "HELLO, WORLD!"
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `toUpperCase()` method transforms all characters in the string to uppercase.</p>
+        
+            <h2 class="heading-2">11. toLowerCase()</h2>
+            <p><strong>Description:</strong> Converts all characters in the string to lowercase.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        String lowerCaseStr = str.toLowerCase(); // Returns "hello, world!"
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `toLowerCase()` method transforms all characters in the string to lowercase.</p>
+        
+            <h2 class="heading-2">12. trim()</h2>
+            <p><strong>Description:</strong> Removes leading and trailing whitespaces from the string.</p>
+            <pre>
+                <code>
+        String spacedStr = "   Hello, World!   ";
+        String trimmedStr = spacedStr.trim(); // Returns "Hello, World!"
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `trim()` method eliminates leading and trailing whitespaces from the string.</p>
+        
+            <h2 class="heading-2">13. replace(oldStr, newStr)</h2>
+            <p><strong>Description:</strong> Replaces all occurrences of a specified substring.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        String replacedStr = str.replace("World", "Java"); // Returns "Hello, Java!"
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `replace(oldStr, newStr)` method replaces all occurrences of the specified substring with the new substring.</p>
+        
+            <h2 class="heading-2">14. replace(oldStr, newStr)</h2>
+            <p><strong>Description:</strong> Replaces all occurrences of a specified substring.</p>
+            <pre>
+                <code>
+        String str = "Hello, World!";
+        String replacedStr = str.replace("World", "Java"); // Returns "Hello, Java!"
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `replace(oldStr, newStr)` method replaces all occurrences of the specified substring with the new substring.</p>
+        
+            <h2 class="heading-2">15. split(regex)</h2>
+            <p><strong>Description:</strong> Splits the string into an array of substrings based on the specified regular expression.</p>
+            <pre>
+                <code>
+        String sentence = "Java is a powerful programming language";
+        String[] words = sentence.split(" "); // Returns ["Java", "is", "a", "powerful", "programming", "language"]
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `split(regex)` method breaks the string into an array of substrings using the specified regular expression as the delimiter.</p>
+        
+            <h2 class="heading-2">16. format(format, args)</h2>
+            <p><strong>Description:</strong> Returns a formatted string using the specified format string and arguments.</p>
+            <pre>
+                <code>
+        String formattedStr = String.format("Name: %s, Age: %d", "John", 25); // Returns "Name: John, Age: 25"
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> The `format(format, args)` method creates a formatted string using the specified format string and arguments.</p>
+        </div>
+        
+        <br> <hr>
+        <!--examples-->
+        <div>
+            <h1 class="heading-1">Java String Problems</h1>
+        
+            <h2 class="heading-2">Problem 1: Palindrome Checker</h2>
+            <pre>
+                <code>
+        import java.util.Scanner;
+        
+        public class PalindromeChecker {
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+        
+                System.out.print("Enter a word or phrase: ");
+                String input = scanner.nextLine();
+        
+                boolean isPalindrome = checkPalindrome(input);
+        
+                if (isPalindrome) {
+                    System.out.println("The input is a palindrome.");
+                } else {
+                    System.out.println("The input is not a palindrome.");
+                }
+        
+                scanner.close();
+            }
+        
+            private static boolean checkPalindrome(String input) {
+                String cleanedInput = input.replaceAll("\\s", "").toLowerCase();
+                String reversedInput = new StringBuilder(cleanedInput).reverse().toString();
+                return cleanedInput.equals(reversedInput);
+            }
+        }
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> 
+                The `PalindromeChecker` class takes a word or phrase as input and checks whether it is a palindrome. 
+                - The `checkPalindrome` method removes spaces and converts the input to lowercase for a case-insensitive check. 
+                - It then uses a `StringBuilder` to efficiently reverse the string. 
+                - Finally, it compares the cleaned input with its reversed version to determine if it's a palindrome.
+            </p>
+        
+            <h2 class="heading-2">Problem 2: Word Frequency Counter</h2>
+            <pre>
+                <code>
+        import java.util.HashMap;
+        import java.util.Map;
+        import java.util.Scanner;
+        
+        public class WordFrequencyCounter {
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+        
+                System.out.print("Enter a sentence: ");
+                String inputSentence = scanner.nextLine();
+        
+                Map<String, Integer> wordFrequencyMap = countWordFrequency(inputSentence);
+        
+                System.out.println("Word Frequency:");
+                for (Map.Entry<String, Integer> entry : wordFrequencyMap.entrySet()) {
+                    System.out.println(entry.getKey() + ": " + entry.getValue());
+                }
+        
+                scanner.close();
+            }
+        
+            private static Map<String, Integer> countWordFrequency(String sentence) {
+                Map<String, Integer> wordFrequencyMap = new HashMap<>();
+                String[] words = sentence.split("\\s+");
+        
+                for (String word : words) {
+                    word = word.replaceAll("[^a-zA-Z]", "").toLowerCase();
+                    wordFrequencyMap.put(word, wordFrequencyMap.getOrDefault(word, 0) + 1);
+                }
+        
+                return wordFrequencyMap;
+            }
+        }
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> 
+                The `WordFrequencyCounter` class takes a sentence as input and counts the frequency of each word in the sentence.
+                - The `countWordFrequency` method splits the input sentence into words and removes punctuation. 
+                - It uses a `HashMap` to store the frequency of each word. 
+                - The method updates the word frequency in the map, considering case-insensitivity.
+            </p>
+        
+            <h2 class="heading-2">Problem 3: Email Validator</h2>
+            <pre>
+                <code>
+        import java.util.Scanner;
+        
+        public class EmailValidator {
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+        
+                System.out.print("Enter an email address: ");
+                String email = scanner.nextLine();
+        
+                boolean isValid = validateEmail(email);
+        
+                if (isValid) {
+                    System.out.println("The email address is valid.");
+                } else {
+                    System.out.println("The email address is not valid.");
+                }
+        
+                scanner.close();
+            }
+        
+            private static boolean validateEmail(String email) {
+                String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+                return email.matches(emailRegex);
+            }
+        }
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> 
+                The `EmailValidator` class validates whether a given string is a valid email address based on common email format rules.
+                - The `validateEmail` method uses a regular expression to check if the input string matches a simple email format.
+            </p>
+        
+            <h2 class="heading-2">Problem 4: Password Strength Checker</h2>
+            <pre>
+                <code>
+        import java.util.Scanner;
+        
+        public class PasswordStrengthChecker {
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+        
+                System.out.print("Enter a password: ");
+                String password = scanner.nextLine();
+        
+                int strengthLevel = checkPasswordStrength(password);
+        
+                System.out.println("Password Strength: " + getStrengthDescription(strengthLevel));
+        
+                scanner.close();
+            }
+        
+            private static int checkPasswordStrength(String password) {
+                boolean hasMinimumLength = password.length() >= 8;
+                boolean hasUppercase = !password.equals(password.toLowerCase());
+                boolean hasLowercase = !password.equals(password.toUpperCase());
+                boolean hasDigit = password.matches(".*\\d.*");
+                boolean hasSpecialChar = !password.matches("[a-zA-Z0-9]*");
+        
+                if (hasMinimumLength && hasUppercase && hasLowercase && hasDigit && hasSpecialChar) {
+                    return 4; // Very Strong
+                } else if (hasMinimumLength && hasUppercase && hasLowercase && hasDigit) {
+                    return 3; // Strong
+                } else if (hasMinimumLength && (hasUppercase || hasLowercase) && hasDigit) {
+                    return 2; // Moderate
+                } else if (hasMinimumLength) {
+                    return 1; // Weak
+                } else {
+                    return 0; // Very Weak
+                }
+            }
+        
+            private static String getStrengthDescription(int strengthLevel) {
+                switch (strengthLevel) {
+                    case 4:
+                        return "Very Strong";
+                    case 3:
+                        return "Strong";
+                    case 2:
+                        return "Moderate";
+                    case 1:
+                        return "Weak";
+                    default:
+                        return "Very Weak";
+                }
+            }
+        }
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> 
+                The `PasswordStrengthChecker` class checks the strength of a password based on various criteria such as length, presence of uppercase, lowercase, digit, and special character. 
+                - The `checkPasswordStrength` method evaluates the password based on these criteria and returns a strength level. 
+                - The `getStrengthDescription` method returns a descriptive label for the password strength level.
+            </p>
+        
+            <h2 class="heading-2">Problem 5: String Compression</h2>
+            <pre>
+                <code>
+        import java.util.Scanner;
+        
+        public class StringCompression {
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+        
+                System.out.print("Enter a string: ");
+                String inputString = scanner.nextLine();
+        
+                String compressedString = compressString(inputString);
+        
+                System.out.println("Compressed String: " + compressedString);
+        
+                scanner.close();
+            }
+        
+            private static String compressString(String input) {
+                StringBuilder compressed = new StringBuilder();
+                int count = 1;
+        
+                for (int i = 0; i < input.length(); i++) {
+                    if (i + 1 < input.length() && input.charAt(i) == input.charAt(i + 1)) {
+                        count++;
+                    } else {
+                        compressed.append(input.charAt(i)).append(count);
+                        count = 1;
+                    }
+                }
+        
+                return compressed.length() < input.length() ? compressed.toString() : input;
+            }
+        }
+                </code>
+            </pre>
+            <p><strong>Explanation:</strong> 
+                The `StringCompression` class compresses a given string by replacing repeated characters with the character followed by the count of repetitions.
+                - The `compressString` method iterates through the input string, counting consecutive occurrences of the same character. 
+                - It appends the character and its count to a `StringBuilder`. 
+                - If the compressed string is shorter than the original string, it returns the compressed string; otherwise, it returns the original string.
+            </p>
+        
+        </div>
+    </section>
+</body>
+
+</html>

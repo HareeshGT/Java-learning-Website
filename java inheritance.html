@@ -1,0 +1,918 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java inheritance</title>
+    <link rel="stylesheet" href="object.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="navigation-bar">
+        <nav class="nav">
+            <div class="container">
+              <h1 class="logo"><a href="#">Java Learner</a></h1>
+              <img src="images\logo.png" alt="logo">
+              <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="text.html"><i class="fa-solid fa-book"></i> Text Content</a></li>
+                <li><a href="videos.html"><i class="fa-solid fa-play"></i> Video Tutorial</a></li>
+                <li><a href="practice code.html"><i class="fa-solid fa-terminal"></i> Practice Problems</a></li>
+                <li><a href="./Compiler Java/index.php"><i class="fa-solid fa-gears" style=" color: #108a00;"></i> Compiler</a></li>
+              </ul>
+            </div>
+          </nav>
+</header>
+<section class="">
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+          <div class="title">Side Menu</div>
+          <ul class="list-items">
+            <li><a href="java basics.html">Java Basics</a></li>
+            <li><a href="ControlStatements.html">Control Statements</a></li>
+            <li><a href="java array.html">Java Array</a></li>
+            <li><a href="java strings.html">Java String</a></li>
+            <li><a href="java string methods.html">Java String Methods</a></li>
+            <li><a href="java object class.html">Java Object Class</a></li>
+            <li><a href="java inheritance.html">Java Inheritance</a></li>
+            <li><a href="java polymorphism.html">Java Polymorphism</a></li>
+            <li><a href="abstraction.html">Java Abstraction</a></li>
+            <li><a href="encapsulation.html">Java Encapsulation</a></li>
+        </ul>
+        </nav>
+      </div>
+</section>
+
+    <section class="obcontent">
+        <br>
+     <!--inheritance in java-->
+<div>
+
+
+    <h1 class="heading-1" >Inheritance in Java</h1>
+
+    <!-- 1. Declaring a Subclass -->
+    <h2 class="heading-2">1. Declaring a Subclass</h2>
+    <p>In Java, you use the <code>extends</code> keyword to declare that a class is a subclass of another class. The subclass inherits the fields and methods of the superclass. Here's a simple example:</p>
+    <pre>
+    <code>
+    class Animal {
+        void eat() {
+            System.out.println("Animal is eating");
+        }
+    }
+    
+    class Dog extends Animal {
+        void bark() {
+            System.out.println("Dog is barking");
+        } class="heading-3"
+    }
+    </code>
+    </pre>
+    
+    <!-- 2. Accessing Superclass Members -->
+    <h2 class="heading-2">2. Accessing Superclass Members</h2>
+    <p>The <code>super</code> keyword is used to refer to members (fields or methods) of the superclass within the subclass. This is useful when you want to access or override a method from the superclass.</p>
+    <pre>
+    <code>
+    class Animal {
+        void eat() {
+            System.out.println("Animal is eating");
+        }
+    }
+    
+    class Dog extends Animal {
+        void eat() {
+            super.eat(); // Call the eat() method of the superclass
+            System.out.println("Dog is eating");
+        }
+    }
+    </code>
+    </pre>
+    
+    <!-- 3. Constructor Chaining -->
+    <h2 class="heading-2">3. Constructor Chaining</h2>
+    <p>Constructors in a subclass can call constructors of the superclass using <code>super()</code>. This allows you to initialize both the subclass and superclass parts of an object.</p>
+    <pre>
+    <code>
+    class Animal {
+        Animal() {
+            System.out.println("Animal constructor");
+        }
+    }
+    
+    class Dog extends Animal {
+        Dog() {
+            super(); // Call the constructor of the superclass
+            System.out.println("Dog constructor");
+        }
+    }
+    </code>
+    </pre>
+    
+    <!-- 4. Types of Inheritance -->
+    <h2 class="heading-2">4. Types of Inheritance</h2>
+    <p>Java supports various types of inheritance including single, multiple (through interfaces), multilevel, hierarchical, and hybrid inheritance.</p>
+    <pre>
+    <code>
+    // Example of Multiple Inheritance through Interfaces
+    interface Walkable {
+        void walk();
+    }
+    
+    interface Swimmable {
+        void swim();
+    }
+    
+    class Amphibian implements Walkable, Swimmable {
+        public void walk() {
+            // ...
+        }
+    
+        public void swim() {
+            // ...
+        }
+    }
+    </code>
+    </pre>
+    
+    <!-- 5. Method Overriding -->
+    <h2 class="heading-2">5. Method Overriding</h2>
+    <p>Subclasses can provide their own implementation of a method that is already defined in the superclass. This is called method overriding.</p>
+    <pre>
+    <code>
+    class Animal {
+        void makeSound() {
+            System.out.println("Animal makes a sound");
+        }
+    }
+    
+    class Dog extends Animal {
+        void makeSound() {
+            System.out.println("Dog barks");
+        }
+    }
+    </code>
+    </pre>
+    
+    <!-- 6. Final and Inheritance -->
+    <h2 class="heading-2">6. Final and Inheritance</h2>
+    <p>You can use the <code>final</code> keyword to prevent a class or method from being extended or overridden.</p>
+    <pre>
+    <code>
+    final class FinalClass {
+        // ...
+    }
+    
+    class SubClass /*extends FinalClass*/ { // This would result in a compilation error
+        // ...
+    }
+    </code>
+    </pre>
+    
+    <!-- 7. Abstract Classes and Inheritance -->
+    <h2 class="heading-2">7. Abstract Classes and Inheritance</h2>
+    <p>Abstract classes in Java are often used as base classes that are meant to be extended by concrete subclasses. Abstract classes can have abstract methods that must be implemented by concrete subclasses.</p>
+    <pre>
+    <code>
+    abstract class Shape {
+        abstract void draw(); // Abstract method
+    }
+    
+    class Circle extends Shape {
+        void draw() {
+            System.out.println("Drawing a circle");
+        }
+    }
+    </code>
+    </pre>
+    
+    <!-- 8. Object Class and Inheritance -->
+    <h2 class="heading-2">8. Object Class and Inheritance</h2>
+    <p>In Java, every class implicitly extends the <code>Object</code> class. The <code>Object</code> class provides common methods like <code>toString</code>, <code>equals</code>, and <code>hashCode</code>. This means that any class you create is a subclass of <code>Object</code>.</p>
+    <pre>
+    <code>
+    class MyClass {
+        // ...
+    }
+    
+    // Equivalent to: class MyClass extends Object
+    </code>
+    </pre>
+    
+    <!-- Conclusion -->
+    <h2 class="heading-2">Conclusion</h2>
+    <p>Inheritance is a powerful feature in Java that promotes code reuse and helps in creating well-organized, modular, and extensible software. It allows for the creation of class hierarchies that model real-world relationships and behaviors. Understanding inheritance is crucial for effective object-oriented design and programming in Java.</p>
+    
+</div>
+<br>
+<hr>
+<!--type of inheritance-->
+<div>
+        
+    <h1 class="heading-1">Types of Inheritance in Java</h1>
+
+    <!-- 1. Single Inheritance -->
+    <h2 class="heading-2">1. Single Inheritance</h2>
+    <p>
+        Single inheritance refers to the scenario where a class can inherit from only one superclass.
+        In other words, a subclass extends a single superclass.
+    </p>
+    <pre>
+    <code>
+    class Animal {
+        // ...
+    }
+
+    class Dog extends Animal {
+        // ...
+    }
+    </code>
+    </pre>
+    
+    <!-- 2. Multiple Inheritance (through Interfaces) -->
+    <h2 class="heading-2">2. Multiple Inheritance (through Interfaces)</h2>
+    <p>
+        Java supports multiple inheritance through interfaces.
+        A class can implement multiple interfaces, allowing it to inherit the abstract methods defined in each interface.
+    </p>
+    <pre>
+    <code>
+    interface Walkable {
+        void walk();
+    }
+
+    interface Swimmable {
+        void swim();
+    }
+
+    class Amphibian implements Walkable, Swimmable {
+        public void walk() {
+            // ...
+        }
+
+        public void swim() {
+            // ...
+        }
+    }
+    </code>
+    </pre>
+
+    <!-- 3. Multilevel Inheritance -->
+    <h2 class="heading-2">3. Multilevel Inheritance</h2>
+    <p>
+        In multilevel inheritance, a class extends another class, and then another class extends that derived class,
+        forming a chain of inheritance.
+    </p>
+    <pre>
+    <code>
+    class Animal {
+        // ...
+    }
+
+    class Mammal extends Animal {
+        // ...
+    }
+
+    class Dog extends Mammal {
+        // ...
+    }
+    </code>
+    </pre>
+
+    <!-- 4. Hierarchical Inheritance -->
+    <h2 class="heading-2">4. Hierarchical Inheritance</h2>
+    <p>
+        Hierarchical inheritance occurs when multiple classes inherit from a single superclass.
+        It forms a tree-like structure.
+    </p>
+    <pre>
+    <code>
+    class Shape {
+        // ...
+    }
+
+    class Circle extends Shape {
+        // ...
+    }
+
+    class Rectangle extends Shape {
+        // ...
+    }
+    </code>
+    </pre>
+
+    <!-- 5. Hybrid Inheritance -->
+    <h2 class="heading-2">5. Hybrid Inheritance</h2>
+    <p>
+        Hybrid inheritance is a combination of two or more types of inheritance.
+        It often involves a mix of single, multiple, multilevel, or hierarchical inheritance.
+    </p>
+    <pre>
+    <code>
+    class A {
+        // ...
+    }
+
+    class B extends A {
+        // ...
+    }
+
+    interface C {
+        // ...
+    }
+
+    class D extends B implements C {
+        // ...
+    }
+    </code>
+    </pre>
+
+    <p>
+        It's important to note that Java does not support multiple inheritance through classes to avoid the "diamond problem."
+        The "diamond problem" arises when a class inherits from two classes that have a common ancestor, leading to ambiguity in method resolution.
+        By supporting multiple inheritance through interfaces, Java avoids this issue while still allowing flexibility in class design.
+    </p>
+
+</div>
+<br>
+<hr>
+<!--Java Inheritance Examples-->
+<div>
+    
+<h1 class="heading-1">Java Inheritance Examples</h1>
+<br>
+<!-- Single Inheritance Examples -->
+<h2 class="heading-2">Single Inheritance Examples:</h2>
+<br>
+<!-- Problem 1: Animal Hierarchy -->
+<h3 class="heading-3">Problem 1: Animal Hierarchy</h3>
+<p>
+    Create a class <code>Animal</code> with properties like <code>name</code> and <code>sound</code>.
+    Derive two subclasses, <code>Mammal</code> and <code>Bird</code>, each with specific properties.
+    Demonstrate single inheritance hierarchy.
+</p>
+<pre>
+<code>
+class Animal {
+    String name;
+    String sound;
+
+    Animal(String name, String sound) {
+        this.name = name;
+        this.sound = sound;
+    }
+
+    void makeSound() {
+        System.out.println(name + " makes a " + sound + " sound.");
+    }
+}
+
+class Mammal extends Animal {
+    Mammal(String name, String sound) {
+        super(name, sound);
+    }
+}
+
+class Bird extends Animal {
+    Bird(String name, String sound) {
+        super(name, sound);
+    }
+}
+
+public class AnimalHierarchyExample {
+    public static void main(String[] args) {
+        Mammal dog = new Mammal("Dog", "bark");
+        Bird sparrow = new Bird("Sparrow", "chirp");
+
+        dog.makeSound();
+        sparrow.makeSound();
+    }
+}
+</code>
+</pre>
+
+<!-- Problem 2: Vehicle Inheritance -->
+<h3 class="heading-3">Problem 2: Vehicle Inheritance</h3>
+<p>
+    Create a class <code>Vehicle</code> with properties like <code>make</code> and <code>model</code>.
+    Derive a subclass <code>Car</code> from <code>Vehicle</code> with additional properties.
+    Demonstrate single inheritance.
+</p>
+<pre>
+<code>
+class Vehicle {
+    String make;
+    String model;
+
+    Vehicle(String make, String model) {
+        this.make = make;
+        this.model = model;
+    }
+
+    void displayInfo() {
+        System.out.println("Make: " + make);
+        System.out.println("Model: " + model);
+    }
+}
+
+class Car extends Vehicle {
+    int numberOfDoors;
+
+    Car(String make, String model, int doors) {
+        super(make, model);
+        this.numberOfDoors = doors;
+    }
+
+    void displayCarInfo() {
+        displayInfo();
+        System.out.println("Number of Doors: " + numberOfDoors);
+    }
+}
+
+public class VehicleInheritanceExample {
+    public static void main(String[] args) {
+        Car myCar = new Car("Toyota", "Camry", 4);
+        myCar.displayCarInfo();
+    }
+}
+</code>
+</pre>
+
+<!-- Multiple Inheritance (through Interfaces) Examples -->
+<h2 class="heading-2">Multiple Inheritance (through Interfaces) Examples:</h2>
+<br>
+<!-- Problem 3: Geometry Interfaces -->
+<h3 class="heading-3">Problem 3: Geometry Interfaces</h3>
+<p>
+    Create interfaces <code>Shape</code> and <code>Color</code> with methods related to shapes and colors.
+    Implement these interfaces in a class <code>ColoredRectangle</code> to demonstrate multiple inheritance through interfaces.
+</p>
+<pre>
+<code>
+interface Shape {
+    double calculateArea();
+}
+
+interface Color {
+    String getColor();
+}
+
+class ColoredRectangle implements Shape, Color {
+    int width;
+    int height;
+    String color;
+
+    ColoredRectangle(int width, int height, String color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+
+    @Override
+    public double calculateArea() {
+        return width * height;
+    }
+
+    @Override
+    public String getColor() {
+        return color;
+    }
+}
+
+public class GeometryExample {
+    public static void main(String[] args) {
+        ColoredRectangle rectangle = new ColoredRectangle(5, 8, "Blue");
+        System.out.println("Area: " + rectangle.calculateArea());
+        System.out.println("Color: " + rectangle.getColor());
+    }
+}
+</code>
+</pre>
+
+<!-- Problem 4: Employee Interfaces -->
+<h3 class="heading-3">Problem 4: Employee Interfaces</h3>
+<p>
+    Create interfaces <code>Employee</code> and <code>Manager</code> with methods related to employees and managers.
+    Implement these interfaces in a class <code>ManagerEmployee</code> to demonstrate multiple inheritance through interfaces.
+</p>
+<pre>
+<code>
+interface Employee {
+    void calculateSalary();
+}
+
+interface Manager {
+    void manageTeam();
+}
+
+class ManagerEmployee implements Employee, Manager {
+    String name;
+    int salary;
+
+    ManagerEmployee(String name, int salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    @Override
+    public void calculateSalary() {
+        System.out.println("Salary for " + name + ": $" + salary);
+    }
+
+    @Override
+    public void manageTeam() {
+        System.out.println(name + " is managing the team.");
+    }
+}
+
+public class EmployeeManagementExample {
+    public static void main(String[] args) {
+        ManagerEmployee manager = new ManagerEmployee("John Doe", 60000);
+        manager.calculateSalary();
+        manager.manageTeam();
+    }
+}
+</code>
+</pre>
+
+<!-- Multilevel Inheritance Examples -->
+<h2 class="heading-2">Multilevel Inheritance Examples:</h2>
+<br>
+<!-- Problem 5: Vehicle Hierarchy -->
+<h3 class="heading-3">Problem 5: Vehicle Hierarchy</h3>
+<p>
+    Create a class <code>Vehicle</code> with properties like <code>make</code> and <code>model</code>.
+    Derive a subclass <code>Car</code> from <code>Vehicle</code>, and then derive another subclass <code>SportsCar</code> from <code>Car</code>.
+    Demonstrate multilevel inheritance.
+</p>
+<pre>
+<code>
+class Vehicle {
+    String make;
+    String model;
+
+    Vehicle(String make, String model) {
+        this.make = make;
+        this.model = model;
+    }
+
+    void displayInfo() {
+        System.out.println("Make: " + make);
+        System.out.println("Model: " + model);
+    }
+}
+
+class Car extends Vehicle {
+    int numberOfDoors;
+
+    Car(String make, String model, int doors) {
+        super(make, model);
+        this.numberOfDoors = doors;
+    }
+
+    void displayCarInfo() {
+        displayInfo();
+        System.out.println("Number of Doors: " + numberOfDoors);
+    }
+}
+
+class SportsCar extends Car {
+    boolean turbo;
+
+    SportsCar(String make, String model, int doors, boolean turbo) {
+        super(make, model, doors);
+        this.turbo = turbo;
+    }
+
+    void displaySportsCarInfo() {
+        displayCarInfo();
+        System.out.println("Turbocharged: " + turbo);
+    }
+}
+
+public class VehicleHierarchyExample {
+    public static void main(String[] args) {
+        SportsCar sportsCar = new SportsCar("Ferrari", "488 GTB", 2, true);
+        sportsCar.displaySportsCarInfo();
+    }
+}
+</code>
+</pre>
+
+<!-- Problem 6: College Hierarchy -->
+<h3 class="heading-3">Problem 6: College Hierarchy</h3>
+<p>
+    Create a class <code>Person</code> with properties like <code>name</code> and <code>age</code>.
+    Derive a subclass <code>Student</code> from <code>Person</code>, and then derive another subclass <code>CollegeStudent</code> from <code>Student</code>.
+    Demonstrate multilevel inheritance.
+</p>
+<pre>
+<code>
+class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+class Student extends Person {
+    String studentId;
+
+    Student(String name, int age, String studentId) {
+        super(name, age);
+        this.studentId = studentId;
+    }
+
+    void displayStudentInfo() {
+        displayInfo();
+        System.out.println("Student ID: " + studentId);
+    }
+}
+
+class CollegeStudent extends Student {
+    String collegeName;
+
+    CollegeStudent(String name, int age, String studentId, String collegeName) {
+        super(name, age, studentId);
+        this.collegeName = collegeName;
+    }
+
+    void displayCollegeStudentInfo() {
+        displayStudentInfo();
+        System.out.println("College Name: " + collegeName);
+    }
+}
+
+public class CollegeHierarchyExample {
+    public static void main(String[] args) {
+        CollegeStudent collegeStudent = new CollegeStudent("Alice", 20, "12345", "XYZ College");
+        collegeStudent.displayCollegeStudentInfo();
+    }
+}
+</code>
+</pre>
+
+<!-- Hierarchical Inheritance Examples -->
+<h2 class="heading-2">Hierarchical Inheritance Examples:</h2>
+<br>
+<!-- Problem 7: Shape Hierarchy -->
+<h3 class="heading-3">Problem 7: Shape Hierarchy</h3>
+<p>
+    Create a class <code>Shape</code> with properties like <code>name</code> and <code>color</code>.
+    Derive two subclasses, <code>Circle</code> and <code>Rectangle</code>, each with specific properties.
+    Demonstrate hierarchical inheritance.
+</p>
+<pre>
+<code>
+class Shape {
+    String name;
+    String color;
+
+    Shape(String name, color) {
+        this.name = name;
+        this.color = color;
+    }
+
+    void displayInfo() {
+        System.out.println("Shape: " + name);
+        System.out.println("Color: " + color);
+    }
+}
+
+class Circle extends Shape {
+    double radius;
+
+    Circle(String name, color, double radius) {
+        super(name, color);
+        this.radius = radius;
+    }
+
+    void displayCircleInfo() {
+        displayInfo();
+        System.out.println("Radius: " + radius);
+    }
+}
+
+class Rectangle extends Shape {
+    double length;
+    double width;
+
+    Rectangle(String name, color, double length, double width) {
+        super(name, color);
+        this.length = length;
+        this.width = width;
+    }
+
+    void displayRectangleInfo() {
+        displayInfo();
+        System.out.println("Length: " + length);
+        System.out.println("Width: " + width);
+    }
+}
+
+public class ShapeHierarchyExample {
+    public static void main(String[] args) {
+        Circle circle = new Circle("Circle", "Red", 5.0);
+        Rectangle rectangle = new Rectangle("Rectangle", "Blue", 8.0, 6.0);
+
+        circle.displayCircleInfo();
+        rectangle.displayRectangleInfo();
+    }
+}
+</code>
+</pre>
+
+<!-- Problem 8: Animal Kingdom -->
+<h3 class="heading-3">Problem 8: Animal Kingdom</h3>
+<p>
+    Create a class <code>Animal</code> with properties like <code>species</code> and <code>habitat</code>.
+    Derive two subclasses, <code>Mammal</code> and <code>Bird</code>, each with specific properties.
+    Demonstrate hierarchical inheritance.
+</p>
+<pre>
+<code>
+class Animal {
+    String species;
+    String habitat;
+
+    Animal(String species, habitat) {
+        this.species = species;
+        this.habitat = habitat;
+    }
+
+    void displayInfo() {
+        System.out.println("Species: " + species);
+        System.out.println("Habitat: " + habitat);
+    }
+}
+
+class Mammal extends Animal {
+    String furColor;
+
+    Mammal(String species, habitat, String furColor) {
+        super(species, habitat);
+        this.furColor = furColor;
+    }
+
+    void displayMammalInfo() {
+        displayInfo();
+        System.out.println("Fur Color: " + furColor);
+    }
+}
+
+class Bird extends Animal {
+    boolean canFly;
+
+    Bird(String species, habitat, boolean canFly) {
+        super(species, habitat);
+        this.canFly = canFly;
+    }
+
+    void displayBirdInfo() {
+        displayInfo();
+        System.out.println("Can Fly: " + canFly);
+    }
+}
+
+public class AnimalHierarchyExample {
+    public static void main(String[] args) {
+        Mammal tiger = new Mammal("Tiger", "Jungle", "Orange");
+        Bird eagle = new Bird("Eagle", "Mountain", true);
+
+        tiger.displayMammalInfo();
+        eagle.displayBirdInfo();
+    }
+}
+</code>
+</pre>
+
+<!-- Hybrid Inheritance Examples -->
+<h2 class="heading-2">Hybrid Inheritance Examples:</h2>
+<br>
+<!-- Problem 7: Shape Hierarchy -->
+<h3 class="heading-3">Problem 9: Using Single and Multiple Inheritance</h3>
+<p>
+    This example demonstrates hybrid inheritance in Java using a combination of single and multiple inheritance. 
+    The base class <code>Animal</code> has an <code>eat</code> method. The <code>Dog</code> class is a subclass 
+    of <code>Animal</code> with an additional <code>bark</code> method. Another base class <code>Bird</code> 
+    has a <code>fly</code> method. The <code>Parrot</code> class is a subclass of <code>Bird</code> with an 
+    additional <code>talk</code> method. The <code>DogParrot</code> class is a subclass of <code>Dog</code> 
+    and has its own <code>talkAndFly</code> method. In the <code>main</code> method, an instance of 
+    <code>DogParrot</code> is created and methods from the different classes are called.
+</p>
+<pre>
+<code>
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+class Bird {
+    void fly() {
+        System.out.println("Bird is flying");
+    }
+}
+
+class Parrot extends Bird {
+    void talk() {
+        System.out.println("Parrot is talking");
+    }
+}
+
+class DogParrot extends Dog {
+    void talkAndFly() {
+        System.out.println("DogParrot is talking and flying");
+    }
+}
+
+public class HybridInheritanceExample {
+    public static void main(String[] args) {
+        DogParrot dp = new DogParrot();
+        dp.eat();      // Inherited from Animal
+        dp.bark();     // Inherited from Dog
+        dp.talkAndFly(); // Own method in DogParrot
+    }
+}
+</code>
+</pre>
+
+<h3 class="heading-3">Problem 10:  Using Interface and Multiple Inheritance</h3>
+<p>
+    This example demonstrates hybrid inheritance using an interface and multiple inheritance. The <code>Swimmer</code> 
+    interface has a <code>swim</code> method. The base class <code>Animal</code> has an <code>eat</code> method. 
+    The <code>Fish</code> class is a subclass of <code>Animal</code> and implements <code>Swimmer</code>. Another 
+    base class <code>Bird</code> has a <code>fly</code> method. The <code>FlyingFish</code> class is a subclass of 
+    <code>Fish</code> and has its own <code>flyAndSwim</code> method. In the <code>main</code> method, an instance of 
+    <code>FlyingFish</code> is created, and methods from the different classes and interfaces are called.
+</p>
+<pre>
+<code>
+interface Swimmer {
+    void swim();
+}
+
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Fish extends Animal implements Swimmer {
+    void swim() {
+        System.out.println("Fish is swimming");
+    }
+}
+
+class Bird {
+    void fly() {
+        System.out.println("Bird is flying");
+    }
+}
+
+class FlyingFish extends Fish {
+    void flyAndSwim() {
+        System.out.println("FlyingFish is flying and swimming");
+    }
+}
+
+public class HybridInheritanceExample2 {
+    public static void main(String[] args) {
+        FlyingFish ff = new FlyingFish();
+        ff.eat();         // Inherited from Animal
+        ff.swim();        // Inherited from Swimmer
+        ff.flyAndSwim();  // Own method in FlyingFish
+    }
+}
+</code>
+</pre>
+
+</div>
+    </section>
+</body>
+
+</html>

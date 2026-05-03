@@ -1,0 +1,40 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.ctrl-stmts
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#text
+{
+    width: 80%;
+}
+
+ol
+{
+    margin-left: 3rem;
+}
+
+ul
+{
+    margin-left: 2rem;
+}
+
+.syntax-1
+{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #d6bdbd4d;
+    border: 1px solid black;
+}
+
+.keyword
+{
+    color: skyblue;
+}

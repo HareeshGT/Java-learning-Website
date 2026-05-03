@@ -1,0 +1,706 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encapsulation</title>
+    <link rel="stylesheet" href="object.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="navigation-bar">
+        <nav class="nav">
+            <div class="container">
+              <h1 class="logo"><a href="#">Java Learner</a></h1>
+              <img src="images\logo.png" alt="logo">
+              <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="text.html"><i class="fa-solid fa-book"></i> Text Content</a></li>
+                <li><a href="videos.html"><i class="fa-solid fa-play"></i> Video Tutorial</a></li>
+                <li><a href="practice code.html"><i class="fa-solid fa-terminal"></i> Practice Problems</a></li>
+                <li><a href="./Compiler Java/index.php"><i class="fa-solid fa-gears" style=" color: #108a00;"></i> Compiler</a></li>
+              </ul>
+            </div>
+          </nav>
+</header>
+<section class="">
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+          <div class="title">Side Menu</div>
+          <ul class="list-items">
+            <li><a href="java basics.html">Java Basics</a></li>
+            <li><a href="ControlStatements.html">Control Statements</a></li>
+            <li><a href="java array.html">Java Array</a></li>
+            <li><a href="java strings.html">Java String</a></li>
+            <li><a href="java string methods.html">Java String Methods</a></li>
+            <li><a href="java object class.html">Java Object Class</a></li>
+            <li><a href="java inheritance.html">Java Inheritance</a></li>
+            <li><a href="java polymorphism.html">Java Polymorphism</a></li>
+            <li><a href="abstraction.html">Java Abstraction</a></li>
+            <li><a href="encapsulation.html">Java Encapsulation</a></li>
+        </ul>
+        </nav>
+      </div>
+</section>
+
+    <section class="obcontent">
+        <br> <br><br>
+        <!--encapsulation-->
+        <div>
+            <h1 class="heading-1">Encapsulation in Java</h1>
+    
+            <h2  class="heading-2">1. Private Access Modifier:</h2>
+        
+            <p>
+                In Java, the <code>private</code> access modifier is used to restrict the visibility of a field or method to only within its own class. This ensures that the member is not accessible from outside the class, promoting encapsulation.
+            </p>
+        
+            <p>
+                Using <code>private</code> for fields:
+                <pre><code>
+        public class Person {
+            private String name;
+            private int age;
+            // ...
+        }
+                </code></pre>
+            </p>
+        
+            <h2  class="heading-2">2. Getter and Setter Methods:</h2>
+        
+            <p>
+                Getter and setter methods are used to provide controlled access to the private fields of a class. Getter methods retrieve the values of fields, and setter methods modify the values, enforcing encapsulation rules.
+            </p>
+        
+            <p>
+                Example with getter and setter methods:
+                <pre><code>
+        public class Person {
+            private String name;
+            private int age;
+        
+            // Getter method for name
+            public String getName() {
+                return name;
+            }
+        
+            // Setter method for name
+            public void setName(String name) {
+                this.name = name;
+            }
+        
+            // Getter method for age
+            public int getAge() {
+                return age;
+            }
+        
+            // Setter method for age with validation
+            public void setAge(int age) {
+                if (age > 0) {
+                    this.age = age;
+                } else {
+                    System.out.println("Invalid age");
+                }
+            }
+        }
+                </code></pre>
+            </p>
+        
+            <h2  class="heading-2">3. Benefits of Encapsulation:</h2>
+            <div class="space">
+            <ul>
+                <li><strong>Controlled Access:</strong> Encapsulation ensures that the internal details of an object are not directly accessible.</li>
+                <li><strong>Flexibility and Maintenance:</strong> Changes to the internal implementation details do not affect external code, promoting flexibility.</li>
+                <li><strong>Security:</strong> Prevents unauthorized access and manipulation of the internal state.</li>
+                <li><strong>Code Organization:</strong> Groups related data and behavior within a class for improved readability.</li>
+                <li><strong>Facilitates Reusability:</strong> Provides well-defined interfaces for interacting with objects.</li>
+            </ul>
+            </div>
+            <h2  class="heading-2">4. Encapsulation Guidelines:</h2>
+            <div class="space">
+            <ul>
+                <li><strong>Minimize Accessibility:</strong> Make fields as private as possible to limit direct access.</li>
+                <li><strong>Provide Controlled Access:</strong> Use getter and setter methods to control access to private fields.</li>
+                <li><strong>Immutable Classes:</strong> Consider making classes immutable by not providing setter methods.</li>
+                <li><strong>Consistent Naming Conventions:</strong> Follow consistent naming conventions for getter and setter methods.</li>
+                <li><strong>Avoid Public Fields:</strong> Avoid using public fields directly; always encapsulate fields.</li>
+            </ul>
+            </div>
+        </div>
+    <br> <hr>
+    <!--Access Specifiers in Encapsulation -->
+        <div>
+            <h1 class="heading-1">Access Specifiers in Encapsulation (Java)</h1>
+    
+            <h2  class="heading-2">1. Public (`public`):</h2>
+        
+            <p>
+                The <code>public</code> access specifier allows a class, method, or field to be accessed from any other class in the same or different package.
+            </p>
+        
+            <pre>
+                <code>
+        public class Example {
+            public int publicField;
+            public void publicMethod() {
+                // method implementation
+            }
+        }
+                </code>
+            </pre>
+        
+            <h2  class="heading-2">2. Private (`private`):</h2>
+        
+            <p>
+                The <code>private</code> access specifier restricts the visibility of a class, method, or field to only within the same class. It is the most restrictive access level.
+            </p>
+        
+            <pre>
+                <code>
+        public class Example {
+            private int privateField;
+            private void privateMethod() {
+                // method implementation
+            }
+        }
+                </code>
+            </pre>
+        
+            <h2  class="heading-2">3. Protected (`protected`):</h2>
+        
+            <p>
+                The <code>protected</code> access specifier allows a class, method, or field to be accessed within the same package or by a subclass (even if it is in a different package).
+            </p>
+        
+            <pre>
+                <code>
+        public class Example {
+            protected int protectedField;
+            protected void protectedMethod() {
+                // method implementation
+            }
+        }
+                </code>
+            </pre>
+        
+            <h2  class="heading-2">4. Default (Package-Private):</h2>
+        
+            <p>
+                If no access specifier is specified, it defaults to package-private or "default" access. Members with default access are visible only within the same package.
+            </p>
+        
+            <pre>
+                <code>
+        class Example {
+            int defaultField; // package-private
+            void defaultMethod() {
+                // method implementation
+            }
+        }
+                </code>
+            </pre>
+        
+            <h2  class="heading-2">Encapsulation and Access Specifiers:</h2>
+            <div class="space"> 
+            <ul>
+                <li><strong>Private Access:</strong> Fields are often declared as private to encapsulate them, preventing direct access from outside the class.</li>
+                <li><strong>Public Access for Relevant Methods:</strong> Methods that are part of the public interface of a class may have a <code>public</code> access specifier to allow external classes to use them.</li>
+                <li><strong>Protecting Internal State:</strong> The internal state of a class is often protected by using <code>private</code> access for fields and providing controlled access through <code>public</code> or <code>protected</code> methods.</li>
+            </ul>
+            </div>
+        </div>
+    <br> <hr>
+        
+    <!-- example -->
+    <div>
+        <h1 class="heading-1">Java Encapsulation Example</h1>
+    
+        <h2  class="heading-2">Step 1: Define the Person Class</h2>
+    
+        <pre>
+            <code>
+    public class Person {
+        // Step 2: Declare private fields
+        private String name;
+        private int age;
+    
+        // Step 3: Create a constructor to initialize the fields
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+    
+        // Step 4: Create getter method for name
+        public String getName() {
+            return name;
+        }
+    
+        // Step 5: Create setter method for name
+        public void setName(String name) {
+            // Step 6: Implement validation or logic if needed
+            if (name != null &amp;&amp; !name.isEmpty()) {
+                this.name = name;
+            } else {
+                System.out.println("Invalid name");
+            }
+        }
+    
+        // Step 7: Create getter method for age
+        public int getAge() {
+            return age;
+        }
+    
+        // Step 8: Create setter method for age
+        public void setAge(int age) {
+            // Step 9: Implement validation or logic if needed
+            if (age &gt; 0) {
+                this.age = age;
+            } else {
+                System.out.println("Invalid age");
+            }
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2  class="heading-2">Usage Example</h2>
+    
+        <pre>
+            <code>
+    public class Main {
+        public static void main(String[] args) {
+            // Step 10: Create an instance of the Person class
+            Person person = new Person("John", 25);
+    
+            // Step 11: Access private fields using getter methods
+            System.out.println("Name: " + person.getName());
+            System.out.println("Age: " + person.getAge());
+    
+            // Step 12: Modify private fields using setter methods
+            person.setName("Jane");
+            person.setAge(30);
+    
+            // Step 13: Access modified values
+            System.out.println("Updated Name: " + person.getName());
+            System.out.println("Updated Age: " + person.getAge());
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2  class="heading-2">Explanation</h2>
+    
+        <p>
+            Encapsulation is a fundamental principle in object-oriented programming that involves bundling data (attributes) and methods (functions) into a single unit known as a class. The example above demonstrates encapsulation in Java through the creation of a `Person` class.
+        </p>
+    
+        <h2  class="heading-2">Benefits of Encapsulation</h2>
+        <div class="space">
+        <ul>
+            <li>
+                <strong>Controlled Access:</strong> Encapsulation ensures that the internal details of an object are not directly accessible. Access is controlled through well-defined interfaces (getter and setter methods).
+            </li>
+            <li>
+                <strong>Flexibility and Maintenance:</strong> Changes to the internal implementation details of a class do not affect the external code that uses the class. This promotes flexibility and eases maintenance.
+            </li>
+            <li>
+                <strong>Security:</strong> Encapsulation contributes to security by preventing unauthorized access and manipulation of the internal state of an object.
+            </li>
+            <li>
+                <strong>Code Organization:</strong> Encapsulation organizes code by grouping related data and behavior within a class. This improves code readability and maintainability.
+            </li>
+            <li>
+                <strong>Facilitates Reusability:</strong> Encapsulation promotes reusability by providing well-defined interfaces for interacting with objects. Classes with encapsulated functionality can be easily reused in different contexts.
+            </li>
+        </ul>
+        </div>
+    </div>
+    
+    <!--final examples-->
+    <div>
+        <h1>Encapsulation Examples in Java</h1>
+    
+        <h2  class="heading-2">Example 1: Basic Encapsulation</h2>
+    
+        <p>
+            The following Java program demonstrates basic encapsulation with a <code>Student</code> class. Private fields (<code>name</code> and <code>age</code>) are encapsulated using getter and setter methods.
+        </p>
+    
+        <pre>
+            <code>
+    public class Student {
+        private String name;
+        private int age;
+    
+        // Constructor
+        public Student(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+    
+        // Getter method for name
+        public String getName() {
+            return name;
+        }
+    
+        // Setter method for name
+        public void setName(String name) {
+            this.name = name;
+        }
+    
+        // Getter method for age
+        public int getAge() {
+            return age;
+        }
+    
+        // Setter method for age with validation
+        public void setAge(int age) {
+            if (age > 0) {
+                this.age = age;
+            } else {
+                System.out.println("Invalid age");
+            }
+        }
+    
+        public static void main(String[] args) {
+            // Creating a Student object
+            Student student = new Student("John", 20);
+    
+            // Accessing private fields using getter methods
+            System.out.println("Name: " + student.getName());
+            System.out.println("Age: " + student.getAge());
+    
+            // Modifying private fields using setter methods
+            student.setName("Jane");
+            student.setAge(21);
+    
+            // Accessing modified values
+            System.out.println("Updated Name: " + student.getName());
+            System.out.println("Updated Age: " + student.getAge());
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2  class="heading-2">Example 2: Encapsulation with Complex Data Type</h2>
+    
+        <p>
+            This Java program demonstrates encapsulation with a <code>Book</code> class. The <code>Book</code> class encapsulates the <code>title</code> and <code>author</code> fields, where <code>author</code> is an instance of the <code>Author</code> class.
+        </p>
+    
+        <pre>
+            <code>
+    public class Book {
+        private String title;
+        private Author author;
+    
+        // Constructor
+        public Book(String title, Author author) {
+            this.title = title;
+            this.author = author;
+        }
+    
+        // Getter method for title
+        public String getTitle() {
+            return title;
+        }
+    
+        // Setter method for title
+        public void setTitle(String title) {
+            this.title = title;
+        }
+    
+        // Getter method for author
+        public Author getAuthor() {
+            return author;
+        }
+    
+        // Setter method for author
+        public void setAuthor(Author author) {
+            this.author = author;
+        }
+    
+        public static void main(String[] args) {
+            // Creating an Author object
+            Author author = new Author("J.K. Rowling", "jkrowling@gmail.com");
+    
+            // Creating a Book object
+            Book harryPotter = new Book("Harry Potter", author);
+    
+            // Accessing private fields using getter methods
+            System.out.println("Book Title: " + harryPotter.getTitle());
+            System.out.println("Author: " + harryPotter.getAuthor().getName());
+        }
+    }
+    
+    class Author {
+        private String name;
+        private String email;
+    
+        // Constructor
+        public Author(String name, String email) {
+            this.name = name;
+            this.email = email;
+        }
+    
+        // Getter method for name
+        public String getName() {
+            return name;
+        }
+    
+        // Getter method for email
+        public String getEmail() {
+            return email;
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2  class="heading-2">Example 3: Immutable Class</h2>
+    
+        <p>
+            The following Java program demonstrates encapsulation with an immutable class, <code>ImmutablePerson</code>. The class has <code>final</code> fields and does not provide any setter methods.
+        </p>
+    
+        <pre>
+            <code>
+    public final class ImmutablePerson {
+        private final String name;
+        private final int age;
+    
+        // Constructor
+        public ImmutablePerson(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+    
+        // Getter method for name
+        public String getName() {
+            return name;
+        }
+    
+        // Getter method for age
+        public int getAge() {
+            return age;
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2  class="heading-2">Example 4: Encapsulation with Complex Data Type and Validation</h2>
+    
+        <p>
+            The <code>Library</code> class encapsulates a list of <code>Book</code> objects. It includes getter and setter methods for the library name, a getter method for the list of books (returning an unmodifiable view), and a method to add books with validation.
+        </p>
+    
+        <pre>
+            <code>
+    public class Library {
+        private String name;
+        private List&lt;Book&gt; books;
+    
+        // Constructor
+        public Library(String name) {
+            this.name = name;
+            this.books = new ArrayList&lt;&gt;();
+        }
+    
+        // Getter method for name
+        public String getName() {
+            return name;
+        }
+    
+        // Setter method for name
+        public void setName(String name) {
+            this.name = name;
+        }
+    
+        // Getter method for books
+        public List&lt;Book&gt; getBooks() {
+            return Collections.unmodifiableList(books);
+        }
+    
+        // Method to add a book to the library
+        public void addBook(Book book) {
+            if (book != null) {
+                books.add(book);
+            }
+        }
+    
+        public static void main(String[] args) {
+            // Creating a Library object
+            Library library = new Library("City Library");
+    
+            // Creating Book objects
+            Book book1 = new Book("The Catcher in the Rye", "J.D. Salinger");
+            Book book2 = new Book("To Kill a Mockingbird", "Harper Lee");
+    
+            // Adding books to the library
+            library.addBook(book1);
+            library.addBook(book2);
+    
+            // Accessing private fields using getter methods
+            System.out.println("Library Name: " + library.getName());
+            System.out.println("Books in the Library: " + library.getBooks());
+        }
+    }
+    
+    class Book {
+        private String title;
+        private String author;
+    
+        // Constructor
+        public Book(String title, String author) {
+            this.title = title;
+            this.author = author;
+        }
+    
+        // Getter method for title
+        public String getTitle() {
+            return title;
+        }
+    
+        // Getter method for author
+        public String getAuthor() {
+            return author;
+        }
+    
+        @Override
+        public String toString() {
+            return title + " by " + author;
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2  class="heading-2">Example 5: Encapsulation with Modifiers</h2>
+    
+        <p>
+            The <code>Employee</code> class demonstrates encapsulation with modifiers. It encapsulates the employee's name and salary. Getter and setter methods provide access to private fields, and a method is included to calculate the employee's bonus.
+        </p>
+    
+        <pre>
+            <code>
+    public class Employee {
+        private String name;
+        private double salary;
+        private static final double BONUS_PERCENTAGE = 0.1;
+    
+        // Constructor
+        public Employee(String name, double salary) {
+            this.name = name;
+            this.salary = salary;
+        }
+    
+        // Getter method for name
+        public String getName() {
+            return name;
+        }
+    
+        // Setter method for name
+        public void setName(String name) {
+            this.name = name;
+        }
+    
+        // Getter method for salary
+        public double getSalary() {
+            return salary;
+        }
+    
+        // Method to calculate bonus
+        public double calculateBonus() {
+            return salary * BONUS_PERCENTAGE;
+        }
+    
+        public static void main(String[] args) {
+            // Creating an Employee object
+            Employee employee = new Employee("Alice", 50000);
+    
+            // Accessing private fields using getter methods
+            System.out.println("Employee Name: " + employee.getName());
+            System.out.println("Employee Salary: $" + employee.getSalary());
+    
+            // Calculating and displaying bonus
+            System.out.println("Bonus: $" + employee.calculateBonus());
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2  class="heading-2">Example 6: Encapsulation in a Banking System</h2>
+    
+        <p>
+            The <code>BankAccount</code> class encapsulates the account number and balance in a simple banking system. Getter methods provide access to private fields, and methods are included for deposit and withdrawal, each with validation checks.
+        </p>
+    
+        <pre>
+            <code>
+    public class BankAccount {
+        private String accountNumber;
+        private double balance;
+    
+        // Constructor
+        public BankAccount(String accountNumber, double initialBalance) {
+            this.accountNumber = accountNumber;
+            this.balance = initialBalance;
+        }
+    
+        // Getter method for account number
+        public String getAccountNumber() {
+            return accountNumber;
+        }
+    
+        // Getter method for balance
+        public double getBalance() {
+            return balance;
+        }
+    
+        // Method to deposit money
+        public void deposit(double amount) {
+            if (amount > 0) {
+                balance += amount;
+                System.out.println("Deposit successful. New balance: $" + balance);
+            } else {
+                System.out.println("Invalid deposit amount");
+            }
+        }
+    
+        // Method to withdraw money
+        public void withdraw(double amount) {
+            if (amount > 0 && amount <= balance) {
+                balance -= amount;
+                System.out.println("Withdrawal successful. New balance: $" + balance);
+            } else {
+                System.out.println("Invalid withdrawal amount or insufficient funds");
+            }
+        }
+    
+        public static void main(String[] args) {
+            // Creating a BankAccount object
+            BankAccount account = new BankAccount("123456", 1000);
+    
+            // Accessing private fields using getter methods
+            System.out.println("Account Number: " + account.getAccountNumber());
+            System.out.println("Initial Balance: $" + account.getBalance());
+    
+            // Performing transactions
+            account.deposit(500);
+            account.withdraw(200);
+        }
+    }
+            </code>
+        </pre>
+    
+    </div>
+    </section>
+</body>
+
+</html>

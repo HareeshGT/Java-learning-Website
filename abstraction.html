@@ -1,0 +1,907 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abstraction</title>
+    <link rel="stylesheet" href="object.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="navigation-bar">
+        <nav class="nav">
+            <div class="container">
+              <h1 class="logo"><a href="#">Java Learner</a></h1>
+              <img src="images\logo.png" alt="logo">
+              <ul>
+                <li><a href="# current"><i class="fa-solid fa-house" style=" color: #108a00;"></i> Home</a></li>
+                <li><a href="text.html"><i class="fa-solid fa-book" style=" color: #108a00;"></i> Text Content</a></li>
+                <li><a href="videos.html"><i class="fa-solid fa-play" style=" color: #108a00;"></i> Video Tutorial</a></li>
+                <li><a href="practice code.html"><i class="fa-solid fa-terminal" style=" color: #108a00;"></i> Practice Problems</a></li>
+                <li><a href="./Compiler Java/index.php"><i class="fa-solid fa-gears" style=" color: #108a00;"></i> Compiler</a></li>
+              </ul>
+            </div>
+          </nav>
+</header>
+<section class="">
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+          <div class="title">Side Menu</div>
+          <ul class="list-items">
+            <li><a href="java basics.html">Java Basics</a></li>
+            <li><a href="ControlStatements.html">Control Statements</a></li>
+            <li><a href="java array.html">Java Array</a></li>
+            <li><a href="java strings.html">Java String</a></li>
+            <li><a href="java string methods.html">Java String Methods</a></li>
+            <li><a href="java object class.html">Java Object Class</a></li>
+            <li><a href="java inheritance.html">Java Inheritance</a></li>
+            <li><a href="java polymorphism.html">Java Polymorphism</a></li>
+            <li><a href="abstraction.html">Java Abstraction</a></li>
+            <li><a href="encapsulation.html">Java Encapsulation</a></li>
+        </ul>
+        </nav>
+      </div>
+</section>
+
+    <section class="obcontent">
+        <br>
+        <h1 class="heading-1">Java Abstraction</h1>
+    
+        <p>
+            Abstraction is one of the four fundamental Object-Oriented Programming (OOP) principles, alongside encapsulation, inheritance, and polymorphism. It involves simplifying complex systems by modeling classes based on their essential properties and behaviors. In Java, abstraction is achieved through abstract classes and interfaces.
+        </p>
+    <!-- benefits of abstraction -->
+        <div>
+            <h2 class="heading-2">Benefits of Abstraction in Java</h2>
+    
+            <p>
+                Abstraction in Java is a crucial concept in object-oriented programming. It offers various benefits that contribute to the development of scalable, maintainable, and flexible software systems.
+            </p>
+        
+            <h3 class="heading-3">1. Simplifies Complexity:</h3>
+        
+            <p>
+                Abstraction allows developers to focus on essential features, simplifying the understanding and management of complex systems. By ignoring non-essential details, abstraction provides a clear and concise view of the system.
+            </p>
+        
+            <h3 class="heading-3">2. Encapsulation:</h3>
+        
+            <p>
+                Abstraction and encapsulation go hand in hand. Abstraction helps in defining only the necessary details in an interface or abstract class, while encapsulation ensures that the internal details are hidden. This promotes better code organization and reduces dependencies.
+            </p>
+        
+            <!-- Repeat the pattern for the remaining benefits -->
+        
+            <h3 class="heading-3">3. Code Reusability:</h3>
+        
+            <p>
+                Abstraction supports the creation of reusable components. Abstract classes and interfaces act as blueprints, allowing multiple classes to implement the same abstraction, leading to code reuse and consistency.
+            </p>
+        
+            <h3 class="heading-3">4. Flexibility and Extensibility:</h3>
+        
+            <p>
+                Abstraction provides flexibility in design, allowing changes to the implementation of an abstract class without affecting the code using the abstraction. This flexibility facilitates the extension of the codebase.
+            </p>
+        
+            <h3 class="heading-3">5. Implementation Hiding:</h3>
+        
+            <p>
+                Abstraction hides the internal implementation details, revealing only the essential characteristics of an object. This information hiding protects the internal workings of a class, promoting a clear separation between interface and implementation.
+            </p>
+        
+            <h3 class="heading-3">6. Enhances Modularity:</h3>
+        
+            <p>
+                Abstraction encourages a modular design, breaking down a complex system into smaller, manageable components. This modular approach simplifies development, testing, and maintenance of the software.
+            </p>
+        
+            <h3 class="heading-3">7. Enhances Security:</h3>
+        
+            <p>
+                Abstraction contributes to security by restricting access to the internal details of a class. Users interact only with the defined interface, reducing the risk of unauthorized access or manipulation of sensitive data and methods.
+            </p>
+        
+            <h3 class="heading-3">8. Improves Maintainability:</h3>
+        
+            <p>
+                Abstraction improves code maintainability by providing a clear structure and separation of concerns. Changes can be focused on the relevant abstraction, making the codebase more resilient to modifications and updates.
+            </p>
+        
+            <h3 class="heading-3">9. Promotes Polymorphism:</h3>
+        
+            <p>
+                Abstraction is fundamental to achieving polymorphism. Through abstract classes and interfaces, multiple classes can implement the same interface or extend the same abstract class, allowing for polymorphic behavior and increased flexibility.
+            </p>
+        
+            <h3 class="heading-3">10. Facilitates Design Patterns:</h3>
+        
+            <p>
+                Abstraction is a cornerstone in the implementation of various design patterns. Many design patterns, such as Factory Method, Strategy, and Observer, rely on abstraction to create scalable and maintainable software architectures.
+            </p>
+        </div>
+    <br>
+        <hr>
+    <!--abstract class-->
+        <div class="">
+        <h1 class="heading-1">Abstract Classes:</h1>
+    
+        <p>
+            An abstract class in Java is a class that cannot be instantiated on its own and typically serves as a blueprint for other classes.
+            You declare an abstract class using the <code>abstract</code> keyword.
+        </p>
+        <h2 class="heading-2" >Abstract Class in Java</h2>
+    
+        <h3 class="heading-3">1. Declaration:</h3>
+        <pre><code>
+    abstract class MyAbstractClass {
+        // Abstract methods and/or concrete methods
+    }
+        </code></pre>
+    
+        <h3 class="heading-3">2. Abstract Methods:</h3>
+        <pre><code>
+    abstract class Shape {
+        // Abstract method (no implementation)
+        abstract void draw();
+    }
+        </code></pre>
+    
+        <h3 class="heading-3">3. Concrete Methods:</h3>
+        <pre><code>
+    abstract class Shape {
+        // Abstract method (no implementation)
+        abstract void draw();
+    
+        // Concrete method
+        void displayArea() {
+            System.out.println("Area calculation logic");
+        }
+    }
+        </code></pre>
+    
+        <h3 class="heading-3">4. Constructor:</h3>
+        <pre><code>
+    abstract class Animal {
+        String name;
+    
+        // Abstract constructor (no implementation)
+        abstract void makeSound();
+    
+        // Concrete constructor
+        Animal(String name) {
+            this.name = name;
+        }
+    }
+        </code></pre>
+    
+        <h3 class="heading-3">5. Inheritance:</h3>
+        <pre><code>
+    class Dog extends Animal {
+        // Implementation of the abstract method
+        @Override
+        void makeSound() {
+            System.out.println("Bark!");
+        }
+    }
+        </code></pre>
+    
+        <h3 class="heading-3">6. Object Instantiation:</h3>
+        <pre><code>
+    // This will result in a compilation error
+    // MyAbstractClass obj = new MyAbstractClass();
+    
+    // However, you can create instances of concrete subclasses.
+    Animal myDog = new Dog("Buddy");
+        </code></pre>
+    
+        <h3 class="heading-3">7. Use Cases:</h3>
+        <div class="space">
+        <ul>
+            <li>Abstract classes are useful when you want to provide a common base with some default behavior for a group of related classes.</li>
+            <li>They can also be used to define a contract that subclasses must adhere to.</li>
+        </ul>
+        </div>
+        <h3 class="heading-3">Example:</h3>
+        <pre><code>
+    abstract class Shape {
+        String color;
+    
+        Shape(String color) {
+            this.color = color;
+        }
+    
+        abstract double calculateArea();
+    
+        void display() {
+            System.out.println("This is a " + color + " shape.");
+        }
+    }
+    
+    class Circle extends Shape {
+        double radius;
+    
+        Circle(String color, double radius) {
+            super(color);
+            this.radius = radius;
+        }
+    
+        @Override
+        double calculateArea() {
+            return Math.PI * radius * radius;
+        }
+    }
+    
+    class Rectangle extends Shape {
+        double length;
+        double width;
+    
+        Rectangle(String color, double length, double width) {
+            super(color);
+            this.length = length;
+            this.width = width;
+        }
+    
+        @Override
+        double calculateArea() {
+            return length * width;
+        }
+    }
+    
+    public class AbstractClassExample {
+        public static void main(String[] args) {
+            Circle redCircle = new Circle("red", 5.0);
+            redCircle.display();
+            System.out.println("Area of the circle: " + redCircle.calculateArea());
+    
+            Rectangle blueRectangle = new Rectangle("blue", 4.0, 6.0);
+            blueRectangle.display();
+            System.out.println("Area of the rectangle: " + blueRectangle.calculateArea());
+        }
+    }
+        </code></pre>
+    
+        <h2 class="heading-2">Example 1: Simple Abstract Class</h2>
+    
+        <pre>
+            <code>
+    // Abstract class
+    abstract class Shape {
+        // Abstract method (no implementation)
+        abstract void draw();
+    
+        // Concrete method
+        void displayArea() {
+            System.out.println("Area calculation logic");
+        }
+    }
+    
+    // Concrete subclass
+    class Circle extends Shape {
+        // Implementation of the draw method
+        @Override
+        void draw() {
+            System.out.println("Drawing a circle");
+        }
+    }
+    
+    // Concrete subclass
+    class Rectangle extends Shape {
+        // Implementation of the draw method
+        @Override
+        void draw() {
+            System.out.println("Drawing a rectangle");
+        }
+    }
+    
+    public class AbstractClassExample {
+        public static void main(String[] args) {
+            Circle circle = new Circle();
+            circle.draw();
+            circle.displayArea();
+    
+            Rectangle rectangle = new Rectangle();
+            rectangle.draw();
+            rectangle.displayArea();
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Example 2: Abstract Class with Constructor</h2>
+    
+        <pre>
+            <code>
+    // Abstract class
+    abstract class Animal {
+        String name;
+    
+        // Abstract constructor (no implementation)
+        abstract void makeSound();
+    
+        // Concrete constructor
+        Animal(String name) {
+            this.name = name;
+        }
+    
+        // Concrete method
+        void printName() {
+            System.out.println("Name: " + name);
+        }
+    }
+    
+    // Concrete subclass
+    class Dog extends Animal {
+        // Implementation of the abstract constructor
+        Dog(String name) {
+            super(name);
+        }
+    
+        // Implementation of the abstract method
+        @Override
+        void makeSound() {
+            System.out.println("Bark!");
+        }
+    }
+    
+    // Concrete subclass
+    class Cat extends Animal {
+        // Implementation of the abstract constructor
+        Cat(String name) {
+            super(name);
+        }
+    
+        // Implementation of the abstract method
+        @Override
+        void makeSound() {
+            System.out.println("Meow!");
+        }
+    }
+    
+    public class AnimalExample {
+        public static void main(String[] args) {
+            Dog myDog = new Dog("Buddy");
+            myDog.printName();
+            myDog.makeSound();
+    
+            Cat myCat = new Cat("Whiskers");
+            myCat.printName();
+            myCat.makeSound();
+        }
+    }
+            </code>
+        </pre>
+    
+        </div>
+    <br>
+    <hr>
+    <!--abstract method-->
+        <div>
+        <h1 class="heading-1">Abstract Methods:</h1>
+    
+        <p>
+            Abstract classes can have both abstract methods and concrete methods. Abstract methods are declared using the <code>abstract</code> keyword and have no implementation in the abstract class.
+            They are meant to be implemented by subclasses. Concrete methods in an abstract class have an actual implementation.
+        </p>
+    
+        <h2 class="heading-2">Declaration:</h2>
+    
+        <p>
+            Abstract methods are declared using the <code>abstract</code> keyword. They don't have a method body or implementation.
+        </p>
+    
+        <pre>
+            <code>
+    abstract class MyAbstractClass {
+        abstract void myAbstractMethod(); // Abstract method declaration
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Use in Abstract Classes:</h2>
+    
+        <p>
+            Abstract classes often have one or more abstract methods. Subclasses of an abstract class must provide concrete implementations for all abstract methods unless they are also declared as abstract.
+        </p>
+    
+        <pre>
+            <code>
+    abstract class Shape {
+        abstract void draw(); // Abstract method
+    
+        void displayArea() {
+            System.out.println("Area calculation logic");
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Use in Interfaces:</h2>
+    
+        <p>
+            In interfaces, all methods are implicitly abstract. Interfaces can have both abstract methods and, with Java 8 onwards, default and static methods.
+        </p>
+    
+        <pre>
+            <code>
+    interface Drawable {
+        void draw(); // Abstract method
+    
+        default void show() {
+            System.out.println("Default method implementation");
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Implementation in Subclasses:</h2>
+    
+        <p>
+            Any class that extends an abstract class or implements an interface with abstract methods must provide concrete implementations for those abstract methods.
+        </p>
+    
+        <pre>
+            <code>
+    class Circle extends Shape {
+        @Override
+        void draw() {
+            System.out.println("Drawing a circle");
+        }
+    }
+    
+    class MyDrawableClass implements Drawable {
+        @Override
+        public void draw() {
+            System.out.println("Drawing in my own way");
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Abstract Method in Abstract Classes vs. Interfaces:</h2>
+    
+        <p>
+            In abstract classes, abstract methods can coexist with concrete methods, fields, and constructors. In interfaces, all methods are implicitly abstract (prior to Java 8), or they can be explicitly declared with the <code>abstract</code> keyword (though it's optional).
+        </p>
+    
+        <h2 class="heading-2">Purpose:</h2>
+    
+        <p>
+            Abstract methods define a contract that must be fulfilled by any concrete subclass or implementing class. They provide a way to enforce a certain behavior across multiple classes while allowing flexibility in how that behavior is implemented.
+        </p>
+    
+        <h3 class="heading-3">Example 1: Abstract Class with Abstract Method</h3>
+    
+        <p>
+            In this example, an abstract class <code>Shape</code> is defined with an abstract method <code>draw()</code> and a concrete method <code>displayArea()</code>.
+            Two concrete subclasses, <code>Circle</code> and <code>Rectangle</code>, provide specific implementations for the abstract <code>draw()</code> method.
+        </p>
+    
+        <pre>
+            <code>
+    // Abstract class
+    abstract class Shape {
+        // Abstract method (to be implemented by subclasses)
+        abstract void draw();
+    
+        // Concrete method
+        void displayArea() {
+            System.out.println("Area calculation logic");
+        }
+    }
+    
+    // Concrete subclass
+    class Circle extends Shape {
+        // Implementation of the abstract draw method
+        @Override
+        void draw() {
+            System.out.println("Drawing a circle");
+        }
+    }
+    
+    // Concrete subclass
+    class Rectangle extends Shape {
+        // Implementation of the abstract draw method
+        @Override
+        void draw() {
+            System.out.println("Drawing a rectangle");
+        }
+    }
+    
+    // Main class
+    public class AbstractMethodExample1 {
+        public static void main(String[] args) {
+            Circle circle = new Circle();
+            circle.draw();
+            circle.displayArea();
+    
+            Rectangle rectangle = new Rectangle();
+            rectangle.draw();
+            rectangle.displayArea();
+        }
+    }
+            </code>
+        </pre>
+    
+        <h3 class="heading-3">Example 2: Abstract Method in Interface</h3>
+    
+        <p>
+            In this example, an interface <code>Vehicle</code> is defined with an abstract method <code>start()</code> and a default method <code>stop()</code>.
+            Two concrete classes, <code>Car</code> and <code>Bike</code>, implement the <code>Vehicle</code> interface and provide specific implementations for the <code>start()</code> method.
+        </p>
+    
+        <pre>
+            <code>
+    // Interface with abstract method
+    interface Vehicle {
+        void start(); // Abstract method
+    
+        default void stop() {
+            System.out.println("Vehicle stopped"); // Default method
+        }
+    }
+    
+    // Concrete class implementing the interface
+    class Car implements Vehicle {
+        // Implementation of the abstract start method
+        @Override
+        public void start() {
+            System.out.println("Car started");
+        }
+    }
+    
+    // Concrete class implementing the interface
+    class Bike implements Vehicle {
+        // Implementation of the abstract start method
+        @Override
+        public void start() {
+            System.out.println("Bike started");
+        }
+    }
+    
+    // Main class
+    public class AbstractMethodExample2 {
+        public static void main(String[] args) {
+            Car car = new Car();
+            car.start();
+            car.stop();
+    
+            Bike bike = new Bike();
+            bike.start();
+            bike.stop();
+        }
+    }
+            </code>
+        </pre>
+    
+    </div>
+       <br>
+       <hr>
+    <!--interface-->
+    <div>
+        <h1 class="heading-1">Interfaces:</h1>
+    
+        <p>
+            An interface in Java is a collection of abstract methods (and, with Java 8 onwards, default and static methods) that define a contract for implementing classes.
+            Interfaces cannot be instantiated, and classes implement interfaces using the <code>implements</code> keyword.
+        </p>
+        
+        <h2 class="heading-2">Declaration:</h2>
+    
+        <p>
+            An interface is declared using the <code>interface</code> keyword. Methods declared in an interface are implicitly <code>public</code> and <code>abstract</code>. Before Java 8, interfaces could only have abstract methods.
+        </p>
+    
+        <pre>
+            <code>
+    interface MyInterface {
+        void myMethod();  // Implicitly public and abstract
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Abstract Methods:</h2>
+    
+        <p>
+            In an interface, all methods are implicitly abstract. With Java 8 onwards, interfaces can have default and static methods with implementations.
+        </p>
+    
+        <pre>
+            <code>
+    interface MyInterface {
+        void myMethod();  // Abstract method
+    
+        default void defaultMethod() {
+            System.out.println("Default method implementation");
+        }
+    
+        static void staticMethod() {
+            System.out.println("Static method implementation");
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Implementing Interfaces:</h2>
+    
+        <p>
+            A class can implement one or more interfaces using the <code>implements</code> keyword. If a class implements an interface, it must provide concrete implementations for all the abstract methods declared in the interface.
+        </p>
+    
+        <pre>
+            <code>
+    class MyClass implements MyInterface {
+        @Override
+        public void myMethod() {
+            System.out.println("Implementation of myMethod");
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Extending Interfaces:</h2>
+    
+        <p>
+            An interface can extend one or more interfaces using the <code>extends</code> keyword. If an interface extends another interface, it inherits the abstract methods from the parent interface.
+        </p>
+    
+        <pre>
+            <code>
+    interface MyExtendedInterface extends MyInterface {
+        void anotherMethod();
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Use of Constants:</h2>
+    
+        <p>
+            Interfaces can contain constants, which are implicitly <code>public</code>, <code>static</code>, and <code>final</code>. Constants are typically declared in uppercase.
+        </p>
+    
+        <pre>
+            <code>
+    interface MyInterface {
+        int MY_CONSTANT = 42;  // Implicitly public, static, and final
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Functional Interfaces:</h2>
+    
+        <p>
+            A functional interface is an interface with only one abstract method. Functional interfaces can be used with lambda expressions and method references.
+        </p>
+    
+        <pre>
+            <code>
+    @FunctionalInterface
+    interface MyFunctionalInterface {
+        void myMethod();
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Default Methods:</h2>
+    
+        <p>
+            Default methods were introduced in Java 8 to allow interfaces to have method implementations. Classes that implement the interface can use or override default methods.
+        </p>
+    
+        <pre>
+            <code>
+    interface MyInterface {
+        default void defaultMethod() {
+            System.out.println("Default method implementation");
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Static Methods:</h2>
+    
+        <p>
+            Static methods were introduced in Java 8 in interfaces to provide utility methods. Static methods can be called using the interface name.
+        </p>
+    
+        <pre>
+            <code>
+    interface MyInterface {
+        static void staticMethod() {
+            System.out.println("Static method implementation");
+        }
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-2">Marker Interfaces:</h2>
+    
+        <p>
+            Marker interfaces are interfaces with no methods (except perhaps the <code>Serializable</code> and <code>Cloneable</code> interfaces). They are used to indicate a special behavior or capability.
+        </p>
+    
+        <pre>
+            <code>
+    interface MarkerInterface {
+        // No methods
+    }
+            </code>
+        </pre>
+    
+        <h2 class="heading-3">Use Cases:</h2>
+    
+        <p>
+            Interfaces are commonly used to achieve multiple inheritance, allowing a class to inherit from more than one interface. They provide a way to achieve abstraction, allowing you to define a contract without specifying the implementation details. Interfaces are used in Java API, for example, the <code>Runnable</code> and <code>Comparable</code> interfaces.
+        </p>
+    
+        <h2 class="heading-3">Example:</h2>
+    
+        <pre>
+            <code>
+    // An interface with an abstract method and a constant
+    interface MyInterface {
+        void myMethod();  // Abstract method
+    
+        int MY_CONSTANT = 42;  // Constant
+    }
+    
+    // A class implementing the interface
+    class MyClass implements MyInterface {
+        @Override
+        public void myMethod() {
+            System.out.println("Implementation of myMethod");
+        }
+    }
+    
+    // Main class
+    public class InterfaceExample {
+        public static void main(String[] args) {
+            MyClass myObj = new MyClass();
+            myObj.myMethod();
+            System.out.println("Constant value: " + MyInterface.MY_CONSTANT);
+        }
+    }
+            </code>
+        </pre>
+    
+        <h3 class="heading-3">Abstract Methods in Interfaces:</h3>
+    
+        <p>
+            All methods declared in an interface are implicitly public and abstract. Prior to Java 8, interfaces could only have abstract methods.
+            However, with Java 8, interfaces can have default and static methods with implementations.
+        </p>
+    
+        <pre>
+            <code>
+    interface Drawable {
+        void draw();  // Abstract method
+    
+        default void show() {
+            System.out.println("Default method implementation");
+        }
+    }
+            </code>
+        </pre>
+    
+        <h3 class="heading-3">Implementation in Classes:</h3>
+    
+        <p>
+            A class that implements an interface must provide concrete implementations for all the interface's abstract methods.
+            The <code>implements</code> keyword is used for class-to-interface relationships.
+        </p>
+    
+        <pre>
+            <code>
+    class Circle implements Drawable {
+        // Implementation of the draw method
+        @Override
+        public void draw() {
+            System.out.println("Drawing a circle");
+        }
+    }
+            </code>
+        </pre>
+    
+        <h3 class="heading-3">Example 1: Basic Interface Implementation</h3>
+    
+        <p>
+            In this example, we have an interface <code>Shape</code> with a single abstract method <code>draw()</code>. Two concrete classes, <code>Circle</code> and <code>Rectangle</code>, implement the <code>Shape</code> interface providing specific implementations for the <code>draw()</code> method.
+        </p>
+    
+        <pre>
+            <code>
+    // Interface defining a shape
+    interface Shape {
+        void draw(); // Abstract method
+    }
+    
+    // Concrete class implementing the Shape interface
+    class Circle implements Shape {
+        @Override
+        public void draw() {
+            System.out.println("Drawing a circle");
+        }
+    }
+    
+    // Concrete class implementing the Shape interface
+    class Rectangle implements Shape {
+        @Override
+        public void draw() {
+            System.out.println("Drawing a rectangle");
+        }
+    }
+    
+    // Main class
+    public class InterfaceExample1 {
+        public static void main(String[] args) {
+            Shape circle = new Circle();
+            Shape rectangle = new Rectangle();
+    
+            // Drawing shapes using the interface
+            circle.draw();
+            rectangle.draw();
+        }
+    }
+            </code>
+        </pre>
+    
+        <h3 class="heading-3">Example 2: Interface with Default and Static Methods</h3>
+    
+        <p>
+            In this example, we define an interface <code>Vehicle</code> with an abstract method <code>start()</code>, a default method <code>stop()</code>, and a static method <code>honk()</code>. The <code>Car</code> class implements the <code>Vehicle</code> interface and provides a concrete implementation for the <code>start()</code> method. We demonstrate using the interface methods, including the default and static methods.
+        </p>
+    
+        <pre>
+            <code>
+    // Interface with abstract and default methods
+    interface Vehicle {
+        void start(); // Abstract method
+    
+        default void stop() {
+            System.out.println("Vehicle stopped"); // Default method
+        }
+    
+        static void honk() {
+            System.out.println("Honk honk!"); // Static method
+        }
+    }
+    
+    // Concrete class implementing the Vehicle interface
+    class Car implements Vehicle {
+        @Override
+        public void start() {
+            System.out.println("Car started");
+        }
+    
+        // Stop method is inherited from the interface
+    }
+    
+    // Main class
+    public class InterfaceExample2 {
+        public static void main(String[] args) {
+            Vehicle car = new Car();
+    
+            // Using interface methods
+            car.start();
+            car.stop();
+    
+            // Using static method of the interface
+            Vehicle.honk();
+        }
+    }
+            </code>
+        </pre>
+    
+    </div>
+    </section>
+</body>
+
+</html>

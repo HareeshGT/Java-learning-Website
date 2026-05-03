@@ -1,0 +1,359 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java basics</title>
+    <link rel="stylesheet" href="object.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="navigation-bar">
+        <nav class="nav">
+            <div class="container">
+              <h1 class="logo"><a href="#">Java Learner</a></h1>
+              <img src="images\logo.png" alt="logo">
+              <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="text.html"><i class="fa-solid fa-book"></i> Text Content</a></li>
+                <li><a href="videos.html"><i class="fa-solid fa-play"></i> Video Tutorial</a></li>
+                <li><a href="practice code.html"><i class="fa-solid fa-terminal"></i> Practice Problems</a></li>
+                <li><a href="./Compiler Java/index.php"><i class="fa-solid fa-gears" style=" color: #108a00;"></i> Compiler</a></li>
+              </ul>
+            </div>
+          </nav>
+</header>
+<section class="">
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+          <div class="title">Side Menu</div>
+          <ul class="list-items">
+            <li><a href="java basics.html">Java Basics</a></li>
+            <li><a href="ControlStatements.html">Control Statements</a></li>
+            <li><a href="java array.html">Java Array</a></li>
+            <li><a href="java strings.html">Java String</a></li>
+            <li><a href="java string methods.html">Java String Methods</a></li>
+            <li><a href="java object class.html">Java Object Class</a></li>
+            <li><a href="java inheritance.html">Java Inheritance</a></li>
+            <li><a href="java polymorphism.html">Java Polymorphism</a></li>
+            <li><a href="abstraction.html">Java Abstraction</a></li>
+            <li><a href="encapsulation.html">Java Encapsulation</a></li>
+        </ul>
+        </nav>
+      </div>
+</section>
+
+    <section class="obcontent">
+        <!--what is java-->
+<br>
+        <div>
+
+            <h1 class="heading-1">What is Java?</h1>
+
+            <p>
+                Java is a high-level, versatile, object-oriented programming language and computing platform. It was
+                developed by Sun Microsystems (now a subsidiary of Oracle Corporation) and released in 1995. Java is
+                known for its platform independence, meaning that Java programs can run on any device that has a Java
+                Virtual Machine (JVM) installed, regardless of the underlying hardware and operating system.
+            </p>
+<br>
+            <h2 class="heading-2">Key Features of Java:</h2>
+            <div class="space">
+                <ol>
+                    <li><strong>Object-Oriented Programming (OOP):</strong> Java follows the principles of
+                        object-oriented programming, including encapsulation, inheritance, polymorphism, and
+                        abstraction.</li>
+
+                    <li><strong>Platform Independence:</strong> Java achieves platform independence by compiling source
+                        code into an intermediate form called bytecode. This bytecode is then executed by the Java
+                        Virtual Machine (JVM).</li>
+
+                    <li><strong>Write Once, Run Anywhere (WORA):</strong> The platform independence of Java allows
+                        developers to write code once and run it on any device that supports Java.</li>
+
+                    <li><strong>Rich Standard Library:</strong> Java comes with a comprehensive and extensive standard
+                        library that provides functionality for various tasks such as input/output, networking, data
+                        structures, and more.</li>
+
+                    <li><strong>Automatic Memory Management:</strong> Java features automatic garbage collection,
+                        managing memory by identifying and reclaiming unused objects.</li>
+
+                    <li><strong>Security:</strong> Java incorporates various security features to create a secure
+                        computing environment. The JVM runs Java bytecode in a sandboxed environment.</li>
+
+                    <li><strong>Multithreading:</strong> Java supports multithreading, allowing concurrent execution of
+                        multiple threads within a program.</li>
+
+                    <li><strong>Large Community and Ecosystem:</strong> Java has a vast and active developer community,
+                        contributing to an extensive ecosystem of libraries, frameworks, and tools.</li>
+
+                    <li><strong>Versatility:</strong> Java is used in a wide range of applications, including desktop
+                        applications, web applications, mobile applications, enterprise systems, and embedded systems.
+                    </li>
+                </ol>
+            </div>
+            <p>
+                Overall, Java has become one of the most widely used and influential programming languages, and it
+                continues to be a popular choice for various software development projects.
+            </p>
+
+        </div>
+        <br>
+        <hr>
+        <!--Applications of Java-->
+        <div>
+
+            <h1 class="heading-1">Applications of Java</h1>
+
+            <h2 class="heading-3">1. Web Development:</h2>
+            <div class="space">
+                <ul>
+                    <li><strong>Frameworks:</strong> Java-based frameworks like Spring, Struts, and JavaServer Faces
+                        (JSF) are commonly used for building scalable and maintainable web applications.</li>
+                    <li><strong>Servlets and JSP:</strong> Java Servlets and JavaServer Pages (JSP) are fundamental
+                        components for creating dynamic web content and handling HTTP requests.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">2. Enterprise Applications:</h2>
+            <div class="space">
+                <ul>
+                    <li><strong>Java EE (Enterprise Edition):</strong> Java EE provides a set of APIs for building
+                        distributed and scalable enterprise applications. It includes technologies like Enterprise
+                        JavaBeans (EJB), Java Message Service (JMS), and Java Persistence API (JPA).</li>
+                    <li><strong>Spring Framework:</strong> Widely used for building enterprise-level applications,
+                        Spring simplifies Java development and promotes a modular and loosely coupled architecture.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">3. Mobile Applications (Android):</h2>
+            <p><strong>Android Development:</strong> Java is a primary language for Android app development using the
+                Android SDK. Kotlin, another language compatible with the Java Virtual Machine (JVM), is also gaining
+                popularity for Android development.</p>
+
+            <h2 class="heading-3">4. Desktop Applications:</h2>
+            <p><strong>Swing and JavaFX:</strong> Java provides Swing for creating graphical user interfaces (GUIs) and
+                JavaFX for building rich desktop applications with multimedia capabilities.</p>
+
+            <h2 class="heading-3">5. Cloud-based Applications:</h2>
+            <p><strong>Cloud Platforms:</strong> Java is used for developing applications on various cloud platforms.
+                Google Cloud Platform (GCP), Amazon Web Services (AWS), and Microsoft Azure support Java applications.
+            </p>
+
+            <h2 class="heading-3">6. Big Data Technologies:</h2>
+            <div class="space">
+                <ul>
+                    <li><strong>Apache Hadoop:</strong> Hadoop, a framework for distributed storage and processing of
+                        large datasets, is implemented in Java.</li>
+                    <li><strong>Apache Spark and Apache Flink:</strong> These big data processing engines are also
+                        written in Java and provide high-level APIs for large-scale data processing.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">7. Embedded Systems:</h2>
+            <p><strong>Portability:</strong> Java's platform independence is valuable in embedded systems, enabling
+                applications to run on different hardware architectures.</p>
+
+            <h2 class="heading-3">8. Scientific and Research Applications:</h2>
+            <p><strong>Libraries:</strong> Java libraries like Apache Commons Math and JAMA provide support for
+                numerical computing and linear algebra, making it suitable for scientific and research applications.</p>
+
+            <h2 class="heading-3">9. Gaming Industry:</h2>
+            <div class="space">
+                <ul>
+                    <li><strong>LibGDX and jMonkeyEngine:</strong> These Java-based frameworks are used for developing
+                        cross-platform games with 2D and 3D graphics.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">10. Internet of Things (IoT):</h2>
+            <p><strong>Embedded Java:</strong> Java's lightweight and scalable nature makes it suitable for IoT
+                applications. Embedded Java platforms like Eclipse IoT and Kura provide tools for developing IoT
+                solutions.</p>
+
+            <h2 class="heading-3">11. Finance and Banking Systems:</h2>
+            <p><strong>Security and Reliability:</strong> Java is known for its robust security features, making it a
+                preferred choice for developing financial applications that require high levels of security and
+                reliability.</p>
+
+            <h2 class="heading-3">12. Educational Tools:</h2>
+            <p><strong>Processing:</strong> Java-based Processing is widely used in educational settings for teaching
+                programming and visual arts.</p>
+
+        </div>
+<br>
+<hr>
+
+        <!--Java Platforms / Editions-->
+        <div>
+
+            <h1 class="heading-1">Java Platforms / Editions</h1>
+
+            <h2 class="heading-3">1. Java Standard Edition (Java SE):</h2>
+            <p><strong>Purpose:</strong> Java SE is the fundamental platform for developing and running Java
+                applications on various devices, including desktops, servers, and embedded systems.</p>
+            <p><strong>Key Features:</strong></p>
+            <div class="space">
+                <ul>
+                    <li>Core libraries and APIs for essential functionalities, including data structures, networking,
+                        and file I/O.</li>
+                    <li>Swing for building graphical user interfaces (GUIs).</li>
+                    <li>Support for multi-threading.</li>
+                    <li>Java Virtual Machine (JVM) for executing Java bytecode.</li>
+                    <li>Tools for development, debugging, and monitoring.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">2. Java Enterprise Edition (Java EE):</h2>
+            <p><strong>Purpose:</strong> Java EE extends Java SE to address the needs of large-scale, distributed, and
+                enterprise-level applications.</p>
+            <p><strong>Key Features:</strong></p>
+            <div class="space">
+                <ul>
+                    <li>Enterprise JavaBeans (EJB) for building enterprise-level components.</li>
+                    <li>JavaServer Faces (JSF) for constructing web-based user interfaces.</li>
+                    <li>Java Persistence API (JPA) for database access and management.</li>
+                    <li>Java Message Service (JMS) for messaging between distributed components.</li>
+                    <li>Security and transaction management features.</li>
+                    <li>Web services support for building and consuming web-based services.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">3. Java Micro Edition (Java ME):</h2>
+            <p><strong>Purpose:</strong> Java ME is designed for resource-constrained devices, such as mobile phones,
+                embedded systems, and other small devices.</p>
+            <p><strong>Key Features:</strong></p>
+            <div class="space">
+                <ul>
+                    <li>Lightweight runtime environment optimized for devices with limited resources.</li>
+                    <li>APIs for mobile application development (e.g., Mobile Information Device Profile - MIDP).</li>
+                    <li>Configurable profiles and specifications for different types of devices.</li>
+                    <li>Connectivity APIs for networking and communication.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">4. JavaFX:</h2>
+            <p><strong>Purpose:</strong> JavaFX is a platform for building rich internet applications (RIAs) with a
+                modern user interface.</p>
+            <p><strong>Key Features:</strong></p>
+            <div class="space">
+                <ul>
+                    <li>Declarative language (FXML) for defining user interfaces.</li>
+                    <li>Rich set of UI controls and visual effects.</li>
+                    <li>Integration with web technologies, allowing seamless web application development.</li>
+                    <li>2D and 3D graphics support.</li>
+                    <li>Cross-platform compatibility.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">5. Java Card:</h2>
+            <p><strong>Purpose:</strong> Java Card is designed for smart cards and other small-memory devices, providing
+                a secure environment for applications like secure payments and identification.</p>
+            <p><strong>Key Features:</strong></p>
+            <div class="space">
+                <ul>
+                    <li>Subset of Java ME for resource-constrained environments.</li>
+                    <li>Security features for handling sensitive data on smart cards.</li>
+                    <li>Support for applets that run on smart cards.</li>
+                    <li>Java Card Virtual Machine (JCVM) for executing Java Card bytecode.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">6. Java Embedded:</h2>
+            <p><strong>Purpose:</strong> Java Embedded extends Java SE for use in embedded systems, enabling Java
+                applications to run on devices like embedded controllers, sensors, and other hardware.</p>
+            <p><strong>Key Features:</strong></p>
+            <div class="space">
+                <ul>
+                    <li>Lightweight Java runtime optimized for embedded devices.</li>
+                    <li>Support for real-time and low-latency applications.</li>
+                    <li>APIs for embedded hardware integration.</li>
+                    <li>Platform-specific configurations for various embedded environments.</li>
+                </ul>
+            </div>
+            <h2 class="heading-3">7. JavaFX Embedded:</h2>
+            <p><strong>Purpose:</strong> JavaFX Embedded extends JavaFX for use in embedded systems, allowing the
+                development of visually rich applications on embedded platforms.</p>
+            <p><strong>Key Features:</strong></p>
+            <div class="space">
+                <ul>
+                    <li>UI components and visual effects suitable for embedded environments.</li>
+                    <li>Integration with embedded hardware features.</li>
+                    <li>Cross-platform compatibility.</li>
+                    <li>Enhanced performance for resource-constrained devices.</li>
+                </ul>
+            </div>
+        </div>
+<br>
+<hr>
+        <!--features of java-->
+        <div>
+
+            <h1 class="heading-1">Features of Java</h1>
+
+            <h2 class="heading-3">1. Platform Independence:</h2>
+            <p>Java achieves platform independence through its "Write Once, Run Anywhere" (WORA) principle. Java source
+                code is compiled into an intermediate bytecode, which is then executed by the Java Virtual Machine
+                (JVM). Since the JVM is platform-specific, Java programs can run on any device with a compatible JVM,
+                irrespective of the underlying hardware or operating system.</p>
+
+            <h2 class="heading-3">2. Object-Oriented:</h2>
+            <p>Java is designed as an object-oriented programming language, emphasizing the use of classes and objects.
+                This approach promotes modular and organized code, encourages code reuse, and facilitates the modeling
+                of real-world entities using encapsulation, inheritance, and polymorphism.</p>
+
+            <h2 class="heading-3">3. Simple and Easy to Learn:</h2>
+            <p>Java's syntax is straightforward and resembles other C-based languages, making it easy for programmers to
+                learn and understand. The language intentionally avoids complex features, which contributes to its
+                simplicity and enhances the learning curve for beginners.</p>
+
+            <h2 class="heading-3">4. Robust:</h2>
+            <p>Java incorporates strong compile-time checks and runtime checks to ensure robustness. This reduces the
+                chances of errors, enhances program stability, and helps identify potential issues during development
+                rather than at runtime.</p>
+
+            <h2 class="heading-3">5. Secure:</h2>
+            <p>Java is designed with security in mind. It includes features such as a secure runtime environment,
+                automatic memory management, and built-in security checks to protect against common security threats,
+                including viruses, unauthorized access, and memory-related vulnerabilities.</p>
+
+            <h2 class="heading-3">6. Multithreading:</h2>
+            <p>Java supports multithreading, allowing the concurrent execution of multiple threads within a single
+                program. This feature is crucial for developing efficient and responsive applications, particularly in
+                scenarios where tasks need to be performed simultaneously.</p>
+
+            <h2 class="heading-3">7. Architecture-neutral:</h2>
+            <p>Java's architecture-neutral bytecode allows programs to be executed on any platform that has a compatible
+                JVM. This bytecode is generated during compilation and can be run on any device with a JVM, enhancing
+                the portability of Java applications.</p>
+
+            <h2 class="heading-3">8. High Performance:</h2>
+            <p>Java achieves high performance through its Just-In-Time (JIT) compiler. The compiler translates Java
+                bytecode into native machine code at runtime, optimizing execution speed and making Java suitable for
+                performance-sensitive applications.</p>
+
+            <h2 class="heading-3">9. Distributed Computing:</h2>
+            <p>Java provides features and APIs for developing distributed applications. Objects can be distributed
+                across different machines, and Java Remote Method Invocation (RMI) allows methods to be invoked on
+                remote objects. This facilitates the development of applications that can operate seamlessly in a
+                networked environment.</p>
+
+            <h2 class="heading-3">10. Dynamic:</h2>
+            <p>Java supports dynamic loading of classes at runtime. This allows classes to be loaded as needed,
+                enhancing flexibility in program execution. Dynamic features contribute to better memory management and
+                efficient use of system resources.</p>
+
+            <h2 class="heading-3">11. Rich Standard Library:</h2>
+            <p>Java comes with a comprehensive set of libraries and APIs in its standard library (Java Standard Edition
+                API). These libraries cover a wide range of functionalities, including data structures, networking, file
+                I/O, and GUI development. Developers can leverage these libraries to streamline application development
+                and reduce the need for writing code from scratch.</p>
+
+            <h2 class="heading-3">12. Community Support:</h2>
+            <p>Java has a large and active community of developers worldwide. This community provides a wealth of
+                resources, including forums, documentation, tutorials, and open-source projects. The collaborative
+                nature of the community fosters knowledge sharing and support for developers of all skill levels.</p>
+
+    </section>
+</body>
+
+</html>

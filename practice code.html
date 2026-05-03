@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Practice Problems</title>
+   <link rel="stylesheet" href="practice code.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header class="navigation-bar">
+        <nav class="nav">
+            <div class="container">
+              <h1 class="logo"><a href="#">Java Learner</a></h1>
+              <img src="images\logo.png" alt="logo">
+              <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="text.html"><i class="fa-solid fa-book"></i> Text Content</a></li>
+                <li><a href="videos.html"><i class="fa-solid fa-play"></i> Video Tutorial</a></li>
+                <li><a href="practice code.html"><i class="fa-solid fa-terminal"></i> Practice Problems</a></li>
+                <li><a href="./Compiler Java/index.php"><i class="fa-solid fa-gears" style=" color: #108a00;"></i> Compiler</a></li>
+              </ul>
+            </div>
+          </nav>
+</header>
+<br><br><br>
+<section class="head">  
+    <section class="side-bar">
+      <br><br><br>
+      <div class="additional"></div>
+      
+        <header >
+           <h1> Problem Topics </h1>
+        </header>
+
+        <div data-item="1" class="prob">
+           <h2> Simple problems </h2>
+        </div>
+   
+        <div data-item="2" class="prob">
+           <h2> Conditional Statements Problems </h2>
+        </div>
+   
+        <div data-item="3" class="prob">
+          <h2>  Array Based Problems </h2>
+        </div>
+
+        <div data-item="4" class="prob">
+           <h2> String Based Problems </h2>
+        </div>
+
+        <div data-item="5" class="prob">
+           <h2> Class and Object Problems </h2>
+        </div>
+
+        <div data-item="6" class="prob">
+         <h2>   OOPs Based Problems </h2>
+        </div>
+
+        <!--extra-->
+
+        <div data-item="7" class="prob">
+          
+       </div>
+
+       <div data-item="8" class="prob">
+          
+       </div>
+
+       <div data-item="9" class="prob">
+       
+       </div>
+
+       <div data-item="10" class="prob">
+        
+     </div>
+
+     <div data-item="11" class="prob">
+        
+     </div>
+
+     <div data-item="12" class="prob">
+     
+     </div>
+</section>    
+
+<section  class="java">
+    <section class="problems" data-filter="1" id="first">
+        <h1  class="heading-1">Java Basics Problems</h1>
+<div>
+    <!-- Problem 1 -->
+    <h2 class="heading-2" class="heading-2">Problem 1: Print "Hello, World!"</h2>
+    <p><uir>➟</uir> This program prints the message "Hello, World!" to the console.</p>
+    <pre><code>System.out.println("Hello, World!");</code></pre> <br>
+    <hr>
+</div>
+<br>
+<div>
+    <!-- Problem 2 -->
+    <h2 class="heading-2" class="heading-2">Problem 2: Add Two Numbers</h2>
+    <p> <uir>➟</uir> This program adds two numbers and prints the result.</p>
+    <pre><code>int num1 = 10;<br>int num2 = 5;<br>int sum = num1 + num2;<br>System.out.println("Sum: " + sum);</code></pre> <br>
+    <hr>
+</div>
+<br>
+<div>
+    <!-- Problem 3 -->
+    <h2 class="heading-2" class="heading-2">Problem 3: Check Even or Odd</h2>
+    <p> <uir>➟</uir> This program checks if a given number is even or odd.</p>
+    <pre><code>int number = 7;<br>if (number % 2 == 0) {<br>    System.out.println("Even");<br>} else {<br>    System.out.println("Odd");<br>}</code></pre>
+    <br> <hr>
+</div>
+<br>
+<div>
+    <!-- Problem 4 -->
+    <h2 class="heading-2" class="heading-2">Problem 4: Calculate Area of a Circle</h2>
+    <p> <uir>➟</uir> This program calculates the area of a circle given its radius.</p>
+    <pre><code>double radius = 5.0;<br>double area = Math.PI * Math.pow(radius, 2);<br>System.out.println("Area of the circle: " + area);</code></pre>
+   <br> <hr>
+</div>
+<br>
+<div>
+    <!-- Problem 5 -->
+    <h2 class="heading-2" class="heading-2">Problem 5: Reverse a String</h2>
+    <p> <uir>➟</uir> This program reverses a given string.</p>
+    <pre><code>String str = "Java";<br>String reversed = new StringBuilder(str).reverse().toString();<br>System.out.println("Reversed string: " + reversed);</code></pre>
+    <br> <hr>
+</div>
+<br>
+<div>
+    <!-- Problem 6 -->
+    <h2 class="heading-2" class="heading-2">Problem 6: Check Prime Number</h2>
+    <p> <uir>➟</uir> This program checks if a given number is prime.</p>
+    <pre><code>int number = 17;<br>boolean isPrime = true;<br>for (int i = 2; i <= number / 2; i++) {<br>    if (number % i == 0) {<br>        isPrime = false;<br>        break;<br>    }<br>}<br>if (isPrime) {<br>    System.out.println("Prime");<br>} else {<br>    System.out.println("Not Prime");<br>}</code></pre>
+   <br> <hr>
+</div>
+<br>
+<div>
+    <!-- Problem 7 -->
+    <h2 class="heading-2" class="heading-2">Problem 7: Factorial of a Number</h2>
+    <p> <uir>➟</uir> This program calculates the factorial of a given number.</p>
+    <pre><code>int number = 5;<br>long factorial = 1;<br>for (int i = 1; i <= number; i++) {<br>    factorial *= i;<br>}<br>System.out.println("Factorial: " + factorial);</code></pre>
+  <br>  <hr>
+</div>
+<br>
+<div>
+    <!-- Problem 8 -->
+    <h2 class="heading-2" class="heading-2">Problem 8: Fibonacci Series</h2>
+    <p> <uir>➟</uir> This program generates the Fibonacci series up to a given number of terms.</p>
+    <pre><code>int n = 8;<br>int firstTerm = 0, secondTerm = 1;<br>System.out.print("Fibonacci Series: ");<br>for (int i = 1; i <= n; i++) {<br>    System.out.print(firstTerm + " ");<br>    int nextTerm = firstTerm + secondTerm;<br>    firstTerm = secondTerm;<br>    secondTerm = nextTerm;<br>}</code></pre>
+   <br> <hr>
+</div>
+<br>
+<div>
+    <!-- Problem 9 -->
+    <h2 class="heading-2" class="heading-2">Problem 9: Find Maximum in an Array</h2>
+    <p> <uir>➟</uir> This program finds the maximum element in an array.</p>
+    <pre><code>int[] array = {23, 45, 12, 67, 89, 54};<br>int max = array[0];<br>for (int i = 1; i < array.length; i++) {<br>    if (array[i] > max) {<br>        max = array[i];<br>    }<br>}<br>System.out.println("Maximum element: " + max);</code></pre>
+   <br> <hr>
+</div>
+<br>
+<div>
+    <!-- Problem 10 -->
+    <h2 class="heading-2" class="heading-2">Problem 10: Check Palindrome</h2>
+    <p> <uir>➟</uir> This program checks if a given string is a palindrome.</p>
+    <pre><code>String str = "level";<br>boolean isPalindrome = str.equals(new StringBuilder(str).reverse().toString());<br>if (isPalindrome) {<br>    System.out.println("Palindrome");<br>} else {<br>    System.out.println("Not a Palindrome");<br>}</code></pre>
+   <br> <hr>
+</div>
+    </section>
+
+
+<!--control statements-->
+    <section class="problems" data-filter="2">
+        <h1 class="heading-1">Control Statements</h1>
+        <div>
+            <!-- Problem 1 -->
+            <h2 class="heading-2" class="heading-2">Problem 1: Grading System</h2>
+            <p> <uir>➟</uir> Write a Java program that takes a student's score as input and prints their grade based on predefined criteria.</p>
+            <pre><code>Enter student's score: 85
+        Grade: B</code></pre>
+          <br>  <hr>
+        </div>
+        
+        <div>
+            <!-- Problem 2 -->
+            <h2 class="heading-2" class="heading-2">Problem 2: Leap Year</h2>
+            <p> <uir>➟</uir> Create a program that checks if a given year is a leap year based on the leap year rules.</p>
+            <pre><code>Enter a year: 2020
+        Leap year: Yes</code></pre>
+          <br>  <hr>
+        </div>
+        
+        <div>
+            <!-- Problem 3 -->
+            <h2 class="heading-2" class="heading-2">Problem 3: Number Comparison</h2>
+            <p> <uir>➟</uir> Write a Java program that compares two numbers and prints whether the first number is greater, smaller, or equal to the second number.</p>
+            <pre><code>Enter the first number: 10
+        Enter the second number: 5
+        10 is greater than 5</code></pre>
+         <br>   <hr>
+        </div>
+        
+        <div>
+            <!-- Problem 4 -->
+            <h2 class="heading-2" class="heading-2">Problem 4: Positive/Negative/Zero</h2>
+            <p> <uir>➟</uir> Develop a program that reads an integer and prints whether it is positive, negative, or zero.</p>
+            <pre><code>Enter a number: -7
+        Negative number</code></pre>
+          <br>  <hr>
+        </div>
+        
+        <div>
+            <!-- Problem 5 -->
+            <h2 class="heading-2" class="heading-2">Problem 5: Vowel or Consonant</h2>
+            <p> <uir>➟</uir> Create a program that takes a single character as input and determines whether it is a vowel or a consonant.</p>
+            <pre><code>Enter a character: A
+        Vowel</code></pre>
+          <br>  <hr>
+        </div>
+        
+        <div>
+            <!-- Problem 6 -->
+            <h2 class="heading-2" class="heading-2">Problem 6: Triangle Type</h2>
+            <p> <uir>➟</uir> Write a program that takes three angles as input and determines whether they can form a valid triangle, classifying it as acute, obtuse, or right-angled.</p>
+            <pre><code>Enter the three angles: 45 45 90
+        Valid right-angled triangle</code></pre>
+          <br>  <hr>
+        </div>
+        
+        <div>
+            <!-- Problem 7 -->
+            <h2 class="heading-2" class="heading-2">Problem 7: Day of the Week</h2>
+            <p> <uir>➟</uir> Develop a program that takes an integer representing a day of the week and prints the corresponding day.</p>
+            <pre><code>Enter the day number (1-7): 3
+        Wednesday</code></pre>
+          <br>  <hr>
+        </div>
+        
+        <div>
+            <!-- Problem 8 -->
+            <h2 class="heading-2" class="heading-2">Problem 8: Largest of Three Numbers</h2>
+            <p> <uir>➟</uir> Create a program that takes three numbers as input and prints the largest among them.</p>
+            <pre><code>Enter three numbers: 25 12 30
+        Largest number: 30</code></pre>
+           <br> <hr>
+        </div>
+        
+        <div>
+            <!-- Problem 9 -->
+            <h2 class="heading-2" class="heading-2">Problem 9: Temperature Converter</h2>
+            <p> <uir>➟</uir> Write a Java program that converts a temperature from Celsius to Fahrenheit or vice versa based on user input.</p>
+            <pre><code>Enter the temperature: 32
+        Convert to Celsius (C) or Fahrenheit (F)? F
+        Converted temperature: 89.6°F</code></pre>
+        <br>    <hr>
+        </div>
+        
+        <div>
+            <!-- Problem 10 -->
+            <h2 class="heading-2" class="heading-2">Problem 10: Number Pattern</h2>
+            <p> <uir>➟</uir> Design a program that takes a number as input and prints a pattern where each line contains the numbers from 1 to the current line number.</p>
+            <pre><code>Enter a number: 4
+        1
+        1 2
+        1 2 3
+        1 2 3 4</code></pre>
+          <br>  <hr>
+        </div>
+        
+    </section>
+
+<!--array-->
+<section class="problems" data-filter="3">
+    <h1 class="heading-1">Arrays</h1>
+    <div>
+        <!-- Problem 1 -->
+        <h2 class="heading-2">Problem 1: Array Sum</h2>
+        <p> <uir>➟</uir> Write a Java program that calculates the sum of all elements in an array of integers.</p>
+        <pre><code>Array: [2, 5, 8, 3, 1]
+    Sum: 19</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 2 -->
+        <h2 class="heading-2">Problem 2: Array Average</h2>
+        <p> <uir>➟</uir> Create a program that finds the average of values in a double array.</p>
+        <pre><code>Array: [3.5, 2.0, 7.8, 4.2, 6.1]
+    Average: 4.72</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 3 -->
+        <h2 class="heading-2">Problem 3: Largest Element</h2>
+        <p> <uir>➟</uir> Write a Java function that finds the largest element in an array of integers.</p>
+        <pre><code>Array: [12, 34, 56, 78, 45]
+    Largest Element: 78</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 4 -->
+        <h2 class="heading-2">Problem 4: Smallest Element</h2>
+        <p> <uir>➟</uir> Develop a program that determines the smallest element in a given array.</p>
+        <pre><code>Array: [9, 2, 5, 1, 8]
+    Smallest Element: 1</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 5 -->
+        <h2 class="heading-2">Problem 5: Array Reverse</h2>
+        <p> <uir>➟</uir> Implement a Java program that reverses the order of elements in an array.</p>
+        <pre><code>Original Array: [1, 2, 3, 4, 5]
+    Reversed Array: [5, 4, 3, 2, 1]</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 6 -->
+        <h2 class="heading-2">Problem 6: Even-Odd Count</h2>
+        <p> <uir>➟</uir> Write a function that counts the number of even and odd elements in an integer array.</p>
+        <pre><code>Array: [7, 12, 5, 8, 9, 10]
+    Even Count: 3
+    Odd Count: 3</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 7 -->
+        <h2 class="heading-2">Problem 7: Array Intersection</h2>
+        <p> <uir>➟</uir> Create a program that finds the intersection of two arrays, i.e., common elements between them.</p>
+        <pre><code>Array 1: [3, 5, 7, 2, 1]
+    Array 2: [2, 6, 8, 7, 4]
+    Intersection: [7, 2]</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 8 -->
+        <h2 class="heading-2">Problem 8: Duplicate Elements</h2>
+        <p> <uir>➟</uir> Write a Java function to find and print the duplicate elements in an array.</p>
+        <pre><code>Array: [4, 2, 7, 4, 9, 2, 5]
+    Duplicate Elements: [4, 2]</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 9 -->
+        <h2 class="heading-2">Problem 9: Matrix Transpose</h2>
+        <p> <uir>➟</uir> Implement a program that calculates the transpose of a given matrix.</p>
+        <pre><code>Original Matrix:
+    1 2 3
+    4 5 6
+    Transposed Matrix:
+    1 4
+    2 5
+    3 6</code></pre>
+     <br>   <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 10 -->
+        <h2 class="heading-2">Problem 10: Array Rotation</h2>
+        <p> <uir>➟</uir> Write a function to rotate the elements of an array to the right by a specified number of positions.</p>
+        <pre><code>Original Array: [1, 2, 3, 4, 5]
+    Number of Positions to Rotate: 2
+    Rotated Array: [4, 5, 1, 2, 3]</code></pre>
+      <br>  <hr>
+    </div>
+
+</section>
+
+<!--Strings-->
+<section class="problems" data-filter="4">
+    <h1 class="heading-1">Strings</h1>
+    <div>
+        <!-- Problem 1 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 1: String Length</h2>
+        <p> <uir>➟</uir> Write a Java program to find and print the length of a given string.</p>
+        <pre><code>String: "Hello, World!"
+    Length: 13</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 2 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 2: String Concatenation</h2>
+        <p> <uir>➟</uir> Create a program that takes two strings as input and concatenates them.</p>
+        <pre><code>Enter the first string: "Hello"
+    Enter the second string: " World"
+    Concatenated String: "Hello World"</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 3 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 3: String Comparison</h2>
+        <p> <uir>➟</uir> Write a Java program to compare two strings and determine if they are equal.</p>
+        <pre><code>Enter the first string: "apple"
+    Enter the second string: "Apple"
+    Strings are not equal</code></pre>
+       <br> <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 4 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 4: Substring Extraction</h2>
+        <p> <uir>➟</uir> Develop a program that extracts a substring from a given string based on user-defined start and end indices.</p>
+        <pre><code>Enter the string: "Programming is Fun"
+    Enter the start index: 5
+    Enter the end index: 14
+    Substring: "amming is"</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 5 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 5: String Reverse</h2>
+        <p> <uir>➟</uir> Implement a Java function to reverse a given string.</p>
+        <pre><code>Enter the string: "Java"
+    Reversed String: "avaJ"</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 6 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 6: Count Vowels and Consonants</h2>
+        <p> <uir>➟</uir> Write a program that counts the number of vowels and consonants in a given string.</p>
+        <pre><code>Enter the string: "Hello, World!"
+    Vowels: 4
+    Consonants: 8</code></pre>
+       <br> <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 7 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 7: Palindrome Check</h2>
+        <p> <uir>➟</uir> Create a Java function that checks if a given string is a palindrome.</p>
+        <pre><code>Enter the string: "radar"
+    Palindrome: Yes</code></pre>
+       <br> <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 8 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 8: String to Uppercase/Lowercase</h2>
+        <p> <uir>➟</uir> Develop a program that converts a given string to uppercase or lowercase based on user input.</p>
+        <pre><code>Enter the string: "Java Programming"
+    Convert to Uppercase (U) or Lowercase (L)? L
+    Converted String: "java programming"</code></pre>
+       <br> <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 9 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 9: String Splitting</h2>
+        <p> <uir>➟</uir> Write a Java program to split a string into an array of substrings based on a specified delimiter.</p>
+        <pre><code>Enter the string: "apple,orange,banana,grape"
+    Enter the delimiter: ","
+    Substrings: ["apple", "orange", "banana", "grape"]</code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 10 -->
+        <h2 class="heading-2" class="heading-2" class="heading-2">Problem 10: String Formatting</h2>
+        <p> <uir>➟</uir> Create a program that takes user input for name, age, and city, and formats them into a greeting message.</p>
+        <pre><code>Enter your name: "John"
+    Enter your age: 25
+    Enter your city: "New York"
+    Greeting: "Hello, John! You are 25 years old and live in New York."</code></pre>
+     <br>   <hr>
+    </div>
+    
+</section>
+
+<!--Class and object-->
+<section class="problems" data-filter="5">
+    <h1 class="heading-1">Class and object</h1>
+    <div>
+        <!-- Problem 1 -->
+        <h2 class="heading-2" class="heading-2">Problem 1: Person Class</h2>
+        <p> <uir>➟</uir> Define a Person class with attributes like name, age, and address. Create an object of this class and display its details.</p>
+        <pre><code>
+    Person Details:
+    Name: John Doe
+    Age: 25
+    Address: 123 Main Street
+        </code></pre>
+       <br> <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 2 -->
+        <h2 class="heading-2" class="heading-2">Problem 2: Bank Account Class</h2>
+        <p> <uir>➟</uir> Create a BankAccount class with methods for deposit, withdrawal, and checking the balance. Test the class with a few transactions.</p>
+        <pre><code>
+    Account Balance: $1000
+    Deposited: $500
+    Withdrawn: $200
+    Current Balance: $1300
+        </code></pre>
+       <br> <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 3 -->
+        <h2 class="heading-2" class="heading-2">Problem 3: Book Class</h2>
+        <p> <uir>➟</uir> Define a Book class with attributes like title, author, and ISBN. Create multiple book objects and display their details.</p>
+        <pre><code>
+    Book Details:
+    Title: "The Great Gatsby"
+    Author: F. Scott Fitzgerald
+    ISBN: 978-3-16-148410-0
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 4 -->
+        <h2 class="heading-2" class="heading-2">Problem 4: Car Class</h2>
+        <p> <uir>➟</uir> Implement a Car class with attributes such as make, model, and year. Include methods for starting and stopping the car. Test the class with a few cars.</p>
+        <pre><code>
+    Car Details:
+    Make: Toyota
+    Model: Camry
+    Year: 2022
+    Car Started
+    Car Stopped
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 5 -->
+        <h2 class="heading-2" class="heading-2">Problem 5: Student Class</h2>
+        <p> <uir>➟</uir> Create a Student class with attributes for name, roll number, and marks. Calculate the average marks for a group of students.</p>
+        <pre><code>
+    Student Details:
+    Name: Alice
+    Roll Number: 101
+    Marks: 85
+    Average Marks: 75.5
+        </code></pre>
+     <br>   <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 6 -->
+        <h2 class="heading-2" class="heading-2">Problem 6: Rectangle Class</h2>
+        <p> <uir>➟</uir> Define a Rectangle class with attributes for length and width. Include methods to calculate the area and perimeter. Create multiple rectangles and display their properties.</p>
+        <pre><code>
+    Rectangle Details:
+    Length: 10
+    Width: 5
+    Area: 50
+    Perimeter: 30
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 7 -->
+        <h2 class="heading-2" class="heading-2">Problem 7: Employee Class</h2>
+        <p> <uir>➟</uir> Implement an Employee class with attributes like name, employee ID, and salary. Provide methods to give a salary raise and display employee details.</p>
+        <pre><code>
+    Employee Details:
+    Name: Bob
+    Employee ID: 202
+    Salary: $50000
+    After Raise: $55000
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 8 -->
+        <h2 class="heading-2" class="heading-2">Problem 8: Date Class</h2>
+        <p> <uir>➟</uir> Create a Date class with attributes for day, month, and year. Include methods to validate the date and display it in different formats.</p>
+        <pre><code>
+    Date Details:
+    Day: 15
+    Month: 6
+    Year: 2023
+    Valid Date: Yes
+    Formatted Date: 15-06-2023
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 9 -->
+        <h2 class="heading-2" class="heading-2">Problem 9: Library System</h2>
+        <p> <uir>➟</uir> Design a simple library system with classes like Book , Library , and Member. Implement methods for borrowing and returning books.</p>
+        <pre><code>
+    Library System:
+    Available Books: [Book1, Book2, Book3]
+    Borrowed Books: [Book4]
+        </code></pre>
+       <br> <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 10 -->
+        <h2 class="heading-2" class="heading-2">Problem 10: Geometry Calculator</h2>
+        <p> <uir>➟</uir> Create a class named Geometry Calculator with methods for calculating the area and circumference of a circle, area and perimeter of a rectangle, and volume of a cube.</p>
+        <pre><code>
+    Geometry Calculator:
+    Circle Area: 78.54
+    Circle Circumference: 31.42
+    Rectangle Area: 20
+    Rectangle Perimeter: 18
+    Cube Volume: 27
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+</section>
+
+<!--oops -->
+<section class="problems" data-filter="6">
+    <h1 class="heading-1">OOPs</h1>
+    <div>
+        <!-- Problem 1 -->
+        <h2 class="heading-2">Problem 1: Encapsulation</h2>
+        <p> <uir>➟</uir> Create a class representing a BankAccount with private attributes (balance, account number) and methods for deposit and withdrawal.</p>
+        <pre><code>
+    BankAccount Details:
+    Account Number: 123456789
+    Balance: $1000
+    Deposited: $500
+    Withdrawn: $200
+    Current Balance: $1300
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 2 -->
+        <h2 class="heading-2">Problem 2: Inheritance</h2>
+        <p> <uir>➟</uir> Implement a hierarchy of classes representing different shapes (e.g., Circle, Rectangle) with a common base class Shape. Include methods to calculate area.</p>
+        <pre><code>
+    Circle Details:
+    Radius: 5
+    Area: 78.54
+    
+    Rectangle Details:
+    Length: 8
+    Width: 6
+    Area: 48
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 3 -->
+        <h2 class="heading-2">Problem 3: Polymorphism</h2>
+        <p> <uir>➟</uir> Define a class Animal with a method makeSound(). Create subclasses (Dog, Cat) that override this method. Demonstrate polymorphism.</p>
+        <pre><code>
+    Dog Sound: Bark
+    Cat Sound: Meow
+        </code></pre>
+     <br>   <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 4 -->
+        <h2 class="heading-2">Problem 4: Abstraction</h2>
+        <p> <uir>➟</uir> Design an abstract class Vehicle with abstract methods start() and stop(). Create concrete classes (Car, Bike) implementing these methods.</p>
+        <pre><code>
+    Car Started
+    Car Stopped
+    
+    Bike Started
+    Bike Stopped
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 5 -->
+        <h2 class="heading-2">Problem 5: Interface</h2>
+        <p> <uir>➟</uir> Create an interface Printable with a method print(). Implement this interface in classes like Book, Magazine, and demonstrate printing.</p>
+        <pre><code>
+    Printing Book: "Java Programming 101"
+    
+    Printing Magazine: "Tech Today"
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 6 -->
+        <h2 class="heading-2">Problem 6: Composition</h2>
+        <p> <uir>➟</uir> Model a computer system with classes for CPU, RAM, and HardDisk. Create a class Computer that contains instances of these classes.</p>
+        <pre><code>
+    Computer Configuration:
+    CPU: Intel i7
+    RAM: 16GB
+    HardDisk: 1TB SSD
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 7 -->
+        <h2 class="heading-2">Problem 7: Association</h2>
+        <p> <uir>➟</uir> Represent a university system with classes for Student and Course. Demonstrate association by enrolling students in different courses.</p>
+        <pre><code>
+    Course: Programming 101
+    Enrolled Students: [Alice, Bob, Charlie]
+    
+    Course: Database Management
+    Enrolled Students: [Alice, David, Eve]
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 8 -->
+        <h2 class="heading-2">Problem 8: Aggregation</h2>
+        <p> <uir>➟</uir> Model a Library with classes for Book and Library. Demonstrate aggregation by adding books to the library's collection.</p>
+        <pre><code>
+    Library Collection:
+    Books: [Book1, Book2, Book3, Book4]
+        </code></pre>
+      <br>  <hr>
+    </div>
+    
+    <div>
+        <!-- Problem 9 -->
+        <h2 class="heading-2">Problem 9: Encapsulation and Getter/Setter</h2>
+        <p> <uir>➟</uir> Create a class representing a Person with private attributes (name, age) and provide public getter and setter methods.</p>
+        <pre><code>
+    Person Details:
+    Name: John Doe
+    Age: 25
+        </code></pre>
+      <br>  <hr>
+    </div>
+
+    <div>
+        <!-- Problem 10 -->
+        <h2 class="heading-2">Problem 10: Static Members</h2>
+        <p> <uir>➟</uir> Design a class MathOperations with static methods for addition, subtraction, multiplication. Demonstrate the use of static members.</p>
+        <pre><code>
+    Addition: 10
+    Subtraction: 5
+    Multiplication: 30
+        </code></pre>
+     <br>  <hr>
+    </div>
+    
+</section>
+
+</section>
+</section>
+<script src="./practice code.js"></script>
+</body>
+
+</html>
