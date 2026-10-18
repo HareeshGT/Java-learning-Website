@@ -1,190 +1,144 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>java strings</title>
-    <link rel="stylesheet" href="object.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Java Strings | Java Learner</title>
+<meta name="description" content="Creating and working with strings">
+<script>try{var t=localStorage.getItem("jl-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}</script>
+<link rel="stylesheet" href="assets/site.css">
 </head>
-
 <body>
-    <header class="navigation-bar">
-        <nav class="nav">
-            <div class="container">
-              <h1 class="logo"><a href="#">Java Learner</a></h1>
-              <img src="images\logo.png" alt="logo">
-              <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="text.html"><i class="fa-solid fa-book"></i> Text Content</a></li>
-                <li><a href="videos.html"><i class="fa-solid fa-play"></i> Video Tutorial</a></li>
-                <li><a href="practice code.html"><i class="fa-solid fa-terminal"></i> Practice Problems</a></li>
-                <li><a href="./Compiler Java/index.php"><i class="fa-solid fa-gears" style=" color: #108a00;"></i> Compiler</a></li>
-              </ul>
-            </div>
-          </nav>
-</header>
-<section class="">
-    <div class="wrapper">
-        <input type="checkbox" id="btn" hidden>
-        <label for="btn" class="menu-btn">
-          <i class="fas fa-bars"></i>
-          <i class="fas fa-times"></i>
-        </label>
-        <nav id="sidebar">
-          <div class="title">Side Menu</div>
-          <ul class="list-items">
-            <li><a href="java basics.html">Java Basics</a></li>
-            <li><a href="ControlStatements.html">Control Statements</a></li>
-            <li><a href="java array.html">Java Array</a></li>
-            <li><a href="java strings.html">Java String</a></li>
-            <li><a href="java string methods.html">Java String Methods</a></li>
-            <li><a href="java object class.html">Java Object Class</a></li>
-            <li><a href="java inheritance.html">Java Inheritance</a></li>
-            <li><a href="java polymorphism.html">Java Polymorphism</a></li>
-            <li><a href="abstraction.html">Java Abstraction</a></li>
-            <li><a href="encapsulation.html">Java Encapsulation</a></li>
-        </ul>
-        </nav>
-      </div>
-</section>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html"><img src="images/logo.png" alt="">Java Learner</a>
+<div class="search" role="search"><label class="skip" for="search-input">Search lessons and problems</label><input id="search-input" type="search" placeholder="Search lessons…" autocomplete="off" aria-controls="search-results" aria-expanded="false"><ul id="search-results" class="results" hidden></ul></div>
+<button id="menu-toggle" class="btn icon-btn menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">&#9776;</button>
+<nav aria-label="Main" style="display:contents"><ul id="nav-links" class="nav-links"><li><a href="index.html">Home</a></li><li><a href="text.html" aria-current="page">Lessons</a></li><li><a href="videos.html">Videos</a></li><li><a href="practice code.html">Practice</a></li><li><a href="quizzes.html">Quizzes</a></li></ul></nav>
+<button id="theme-toggle" class="btn icon-btn" aria-label="Toggle dark mode" aria-pressed="false">&#9681;</button>
+</div></header>
+<main id="main" class="wrap" data-lesson="java strings.html">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="text.html">Lessons</a> / <span aria-current="page">Java Strings</span></nav><div class="lesson"><aside class="side" aria-label="Lessons"><h2>Lessons</h2><ul><li><a href="java basics.html">Java Basics</a></li><li><a href="ControlStatements.html">Control Statements</a></li><li><a href="java array.html">Java Arrays</a></li><li><a href="java strings.html" aria-current="page">Java Strings</a></li><li><a href="java string methods.html">String Methods</a></li><li><a href="java object class.html">Classes and Objects</a></li><li><a href="java inheritance.html">Inheritance</a></li><li><a href="java polymorphism.html">Polymorphism</a></li><li><a href="abstraction.html">Abstraction</a></li><li><a href="encapsulation.html">Encapsulation</a></li></ul></aside><article class="prose"><span class="badge">Intermediate</span><h1>Java Strings</h1><p class="meta">About 9 min read</p><div class="lesson-actions"><button id="btn-done" class="btn" type="button" aria-pressed="false">Mark as complete</button><button id="btn-bm" class="btn" type="button" aria-pressed="false">Bookmark</button></div>
+      
 
-    <section class="obcontent">
-      <br>
-<!--strings -->
 <div>
-    <h1 class="heading-1">Java String Class Overview</h1>
+    
        
     <p>
         The <code>String</code> class in Java is a fundamental class that represents sequences of characters.
         It is widely used for working with textual data in Java programming.
     </p>
 
-    <h2  class="heading-2">1. Creating Strings:</h2>
-    <h3 class="heading-3">String Literal:</h3>
+    <h3>1. Creating Strings:</h3>
+    <h4>String Literal:</h4>
     <p>
         Strings can be created using string literals. String literals are stored in the "string pool,"
         and if another string with the same value is created using a literal, the JVM may reuse the existing string.
     </p>
-    <pre>
-        <code>String str1 = "Hello, World!"; </code>
+    <pre>        String str1 = "Hello, World!"; 
     </pre>
 
-    <h3 class="heading-3">Using <code>new</code> Keyword:</h3>
+    <h4>Using <code>new</code> Keyword:</h4>
  
     <p>
         Strings can also be created using the <code>new</code> keyword. This always creates a new string object on the heap,
         regardless of whether an equivalent string exists in the pool.
     </p>
-    <pre>
-        <code>String str2 = new String("Hello, World!");</code>
+    <pre>        String str2 = new String("Hello, World!");
     </pre>
 
-    <h2  class="heading-2">2. String Concatenation:</h2>
+    <h3>2. String Concatenation:</h3>
     <p>
         Strings in Java can be concatenated using the <code>+</code> operator. This operation creates a new string by
         combining the contents of multiple strings.
     </p>
-    <pre>
-        <code>
+    <pre>        
             String greeting = "Hello";
             String name = "John";
             String message = greeting + ", " + name + "!";
-        </code>
+        
     </pre>
 
-    <h2  class="heading-2">3. String Methods:</h2>
+    <h3>3. String Methods:</h3>
 
-    <h3  class="heading-3"><code>length()</code>:</h3>
+    <h4><code>length()</code>:</h4>
     <p>
         The <code>length()</code> method returns the number of characters in the string.
     </p>
-    <pre>
-        <code>String str = "Hello, World!";</code>
-        <code>int length = str.length(); // Returns the length of the string (in this case, 13)</code>
+    <pre>        String str = "Hello, World!";
+        int length = str.length(); // Returns the length of the string (in this case, 13)
     </pre>
 
-    <h3 class="heading-3"><code>charAt(index)</code>:</h3>
+    <h4><code>charAt(index)</code>:</h4>
     <p>
         The <code>charAt(index)</code> method returns the character at the specified index in the string.
     </p>
-    <pre>
-        <code>char firstChar = str.charAt(0); // Returns the character at index 0 (in this case, 'H')</code>
+    <pre>        char firstChar = str.charAt(0); // Returns the character at index 0 (in this case, 'H')
     </pre>
 
-    <h3 class="heading-3"><code>substring(beginIndex, endIndex)</code>:</h3>
+    <h4><code>substring(beginIndex, endIndex)</code>:</h4>
     <p>
         The <code>substring(beginIndex, endIndex)</code> method returns a substring based on the specified indices.
     </p>
-    <pre>
-        <code>String substring = str.substring(0, 5); // Returns a substring from index 0 to 4 (in this case, "Hello")</code>
+    <pre>        String substring = str.substring(0, 5); // Returns a substring from index 0 to 4 (in this case, "Hello")
     </pre>
 
-    <h3 class="heading-3"><code>indexOf(str)</code>:</h3>
+    <h4><code>indexOf(str)</code>:</h4>
     <p>
         The <code>indexOf(str)</code> method returns the index of the first occurrence of the specified substring.
     </p>
-    <pre>
-        <code>int indexOfWorld = str.indexOf("World"); // Returns the index of the first occurrence of "World" (in this case, 7)</code>
+    <pre>        int indexOfWorld = str.indexOf("World"); // Returns the index of the first occurrence of "World" (in this case, 7)
     </pre>
 
-    <h3 class="heading-3"><code>toLowerCase()</code>, <code>toUpperCase()</code>:</h3>
+    <h4><code>toLowerCase()</code>, <code>toUpperCase()</code>:</h4>
     <p>
         The <code>toLowerCase()</code> and <code>toUpperCase()</code> methods convert the string to lowercase or uppercase, respectively.
     </p>
-    <pre>
-        <code>String lowerCase = str.toLowerCase(); // Converts the string to lowercase</code>
+    <pre>        String lowerCase = str.toLowerCase(); // Converts the string to lowercase
     </pre>
 
-    <h2  class="heading-2">4. Comparing Strings:</h2>
+    <h3>4. Comparing Strings:</h3>
 
-    <h3 class="heading-3"><code>equals()</code>:</h3>
+    <h4><code>equals()</code>:</h4>
     <p>
         The <code>equals()</code> method checks if two strings are equal in content. It returns <code>true</code> if they are, and <code>false</code> otherwise.
     </p>
-    <pre>
-        <code>String str1 = "Hello";</code>
-        <code>String str2 = "hello";</code>
-        <code>boolean isEqual = str1.equals(str2); // Returns false (case-sensitive comparison)</code>
+    <pre>        String str1 = "Hello";
+        String str2 = "hello";
+        boolean isEqual = str1.equals(str2); // Returns false (case-sensitive comparison)
     </pre>
 
-    <h3 class="heading-3"><code>compareTo()</code>:</h3>
+    <h4><code>compareTo()</code>:</h4>
     <p>
         The <code>compareTo()</code> method compares two strings lexicographically. It returns a negative value if the first string is lexicographically less than the second.
     </p>
-    <pre>
-        <code>int comparisonResult = str1.compareTo(str2); // Returns a value &lt; 0 (case-sensitive lexicographic comparison)</code>
+    <pre>        int comparisonResult = str1.compareTo(str2); // Returns a value &lt; 0 (case-sensitive lexicographic comparison)
     </pre>
 
-    <h2  class="heading-2">5. Immutable Nature:</h2>
+    <h3>5. Immutable Nature:</h3>
     <p>
         Strings in Java are immutable, meaning their values cannot be changed once they are created. Any operation that appears to modify a string actually creates a new string.
         This immutability has implications for memory efficiency and thread safety.
     </p>
-    <pre>
-        <code>String original = "Hello";</code>
-        <code>String modified = original.concat(", World!"); // Creates a new string ("Hello, World!")</code>
+    <pre>        String original = "Hello";
+        String modified = original.concat(", World!"); // Creates a new string ("Hello, World!")
     </pre>
 
-    <h2  class="heading-2">6. String Pool:</h2>
+    <h3>6. String Pool:</h3>
     <p>
         Java maintains a special memory area called the "string pool" for storing string literals. When you create a string using a literal, the JVM checks the pool.
         If an equivalent string is found, it is reused, helping optimize memory usage.
     </p>
-    <pre>
-        <code>String str1 = "Hello";</code>
-        <code>String str2 = "Hello"; // Reuses the existing string from the pool</code>
+    <pre>        String str1 = "Hello";
+        String str2 = "Hello"; // Reuses the existing string from the pool
     </pre>
 </div>
-<br><br> <hr>
-<!--types of string-->
+ <hr>
+
 <div>
     
-    <h1 class="heading-1">Types of Strings in Java</h1>
+    <h2 id="types-of-strings-in-java">Types of Strings in Java</h2>
 
-    <h2 class="heading-2">1. String Literal:</h2>
+    <h3>1. String Literal:</h3>
 
     <p>
         String literals are sequences of characters enclosed within double quotation marks (<code>"</code>). When you create
@@ -192,8 +146,8 @@
         the "string pool."
     </p>
 
-    <h3 class="heading-3">Characteristics:</h3>
-    <div class="space">
+    <h4>Characteristics:</h4>
+    <div>
     <ul>
         <li><strong>Automatic String Interning:</strong> When encountering a string literal, the JVM checks if an equivalent
             string already exists in the string pool. If it does, the existing string is reused.</li>
@@ -201,10 +155,9 @@
             with the same value, reducing the memory footprint.</li>
     </ul>
     </div>
-    <h3 class="heading-3">Example:</h3>
-    <pre>
-        <code>String literalString1 = "Hello";</code>
-        <code>String literalString2 = "Hello"; // Reuses the existing string from the pool</code>
+    <h4>Example:</h4>
+    <pre>        String literalString1 = "Hello";
+        String literalString2 = "Hello"; // Reuses the existing string from the pool
     </pre>
 
     <p>
@@ -212,7 +165,7 @@
         string pool because they have the same value (<code>"Hello"</code>).
     </p>
 
-    <h2 class="heading-2">2. String Object:</h2>
+    <h3>2. String Object:</h3>
 
     <p>
         In addition to string literals, strings can also be created using the <code>new</code> keyword, resulting in the creation
@@ -220,8 +173,8 @@
         exists in the string pool.
     </p>
 
-    <h3 class="heading-3">Characteristics:</h3>
-    <div class="space">
+    <h4>Characteristics:</h4>
+    <div>
     <ul>
         <li><strong>New Instance Creation:</strong> Creating strings with the <code>new</code> keyword always results in the
             instantiation of a new String object, even if a string with the same value exists in the string pool.</li>
@@ -231,10 +184,9 @@
     </ul>
     </div>
 
-    <h3 class="heading-3">Example:</h3>
-    <pre>
-        <code>String objectString1 = new String("Hello");</code>
-        <code>String objectString2 = new String("Hello"); // Creates a new string object</code>
+    <h4>Example:</h4>
+    <pre>        String objectString1 = new String("Hello");
+        String objectString2 = new String("Hello"); // Creates a new string object
     </pre>
 
     <p>
@@ -242,8 +194,8 @@
         having the same value (<code>"Hello"</code>).
     </p>
 
-    <h2 class="heading-2">Important Considerations:</h2>
-    <div class="space">
+    <h3>Important Considerations:</h3>
+    <div>
     <ul>
         <li><strong>Immutability:</strong> Regardless of whether strings are created using literals or objects, strings in Java are
             immutable, meaning their values cannot be changed once they are created.</li>
@@ -261,19 +213,19 @@
     </p>
 
 </div>
-<br><br><hr>
-<!--string class-->
+<hr>
+
 <div>
     
-    <h1 class="heading-1">String Class in Java</h1>
+    <h2 id="string-class-in-java">String Class in Java</h2>
 
-    <h2 class="heading-2">1. Representation of Text:</h2>
+    <h3>1. Representation of Text:</h3>
     <p>The <code>String</code> class is designed to represent sequences of characters, making it a fundamental data type for
         handling text in Java programs. It can be used to store words, sentences, and any textual information.</p>
 
-    <h2 class="heading-2">2. Immutable Nature:</h2>
+    <h3>2. Immutable Nature:</h3>
     <p><strong>Immutability Benefits:</strong></p>
-    <div class="space">
+    <div>
     <ul>
         <li><em>Thread Safety:</em> Immutable strings are thread-safe because their values cannot be changed once created. This
             eliminates the need for synchronization in multithreaded environments.</li>
@@ -281,52 +233,48 @@
             reused multiple times.</li>
     </ul>
     </div>
-    <h2 class="heading-2">3. String Concatenation:</h2>
+    <h3>3. String Concatenation:</h3>
     <p>Strings can be concatenated using the <code>+</code> operator or the <code>concat()</code> method.</p>
-    <pre>
-        <code>String firstName = "John";</code>
-        <code>String lastName = "Doe";</code>
-        <code>String fullName = firstName + " " + lastName;</code>
+    <pre>        String firstName = "John";
+        String lastName = "Doe";
+        String fullName = firstName + " " + lastName;
     </pre>
     <p>The above example demonstrates string concatenation, where the first and last names are combined to form a full name.</p>
 
-    <h2 class="heading-2">4. String Methods for Manipulation:</h2>
+    <h3>4. String Methods for Manipulation:</h3>
     <p>The <code>String</code> class provides a rich set of methods for manipulating strings.</p>
-    <pre>
-        <code>String original = "Hello, World!";</code>
-        <code>String substring = original.substring(0, 5);</code>
-        <code>String replaced = original.replace("World", "Java");</code>
+    <pre>        String original = "Hello, World!";
+        String substring = original.substring(0, 5);
+        String replaced = original.replace("World", "Java");
     </pre>
     <p>This section showcases various string manipulation methods such as extracting a substring and replacing a portion of the
         string.</p>
 
-    <h2 class="heading-2">5. String Comparison:</h2>
+    <h3>5. String Comparison:</h3>
     <p>The <code>String</code> class provides methods for comparing strings, crucial for determining equality or ordering.</p>
-    <pre>
-        <code>String str1 = "Hello";</code>
-        <code>String str2 = "hello";</code>
-        <code>boolean isEqual = str1.equals(str2);</code>
-        <code>int comparisonResult = str1.compareTo(str2);</code>
+    <pre>        String str1 = "Hello";
+        String str2 = "hello";
+        boolean isEqual = str1.equals(str2);
+        int comparisonResult = str1.compareTo(str2);
     </pre>
     <p>This section illustrates string comparison methods, highlighting equality and lexicographic comparison.</p>
 
-    <h2 class="heading-2">6. String Pool:</h2>
+    <h3>6. String Pool:</h3>
     <p>Java maintains a special memory area called the "string pool" for storing string literals.</p>
-    <pre>
-        <code>String str1 = "Hello";</code>
-        <code>String str2 = "Hello";</code>
+    <pre>        String str1 = "Hello";
+        String str2 = "Hello";
     </pre>
     <p>The string pool example demonstrates how Java reuses existing strings with the same value, enhancing memory efficiency.</p>
 
-    <h2 class="heading-2">7. Input/Output Operations:</h2>
+    <h3>7. Input/Output Operations:</h3>
     <p>The <code>String</code> class is commonly used in input/output operations.</p>
     <p><strong>Example:</strong> When reading from or writing to files, the content is often represented as strings.</p>
     <p>This section emphasizes the usage of strings in input/output operations, especially in file handling scenarios.</p>
 
-    <h2 class="heading-2">8. Key Component in Java APIs:</h2>
+    <h3>8. Key Component in Java APIs:</h3>
     <p>Many Java APIs heavily rely on strings.</p>
     <p><strong>Examples:</strong></p>
-    <div class="space">
+    <div>
     <ul>
         <li>In graphical user interfaces (GUIs), string manipulation is fundamental for user interactions.</li>
         <li>In web development, handling HTTP requests and responses involves working with strings.</li>
@@ -335,33 +283,31 @@
     </div>
     <p>This section underscores the integral role of strings in various Java APIs across different domains.</p>
 
-    <h2 class="heading-2">9. String Formatting:</h2>
+    <h3>9. String Formatting:</h3>
     <p>The <code>String</code> class supports formatting using the <code>printf</code> method.</p>
-    <pre>
-        <code>String formattedString = String.format("Name: %s, Age: %d", "John", 25);</code>
+    <pre>        String formattedString = String.format("Name: %s, Age: %d", "John", 25);
     </pre>
     <p>This part demonstrates the formatting capabilities of the <code>String</code> class, allowing the creation of well-formatted
         strings.</p>
 
-    <h2 class="heading-2">10. Regular Expressions:</h2>
+    <h3>10. Regular Expressions:</h3>
     <p>Strings are frequently used in conjunction with regular expressions for pattern matching and searching.</p>
     <p><strong>Example:</strong> Validating user input or extracting information based on patterns.</p>
     <p>Here, the usage of strings in conjunction with regular expressions is highlighted for pattern matching and validation.</p>
 
-    <h2>11. Internationalization and Localization:</h2>
+    <h3>11. Internationalization and Localization:</h3>
     <p>The <code>String</code> class provides support for handling internationalization (i18n) and localization (l10n).</p>
     <p><strong>Example:</strong> Representing and displaying text in different languages using methods like <code>toUpperCase(Locale)</code>.</p>
     <p>This section explains how the <code>String</code> class facilitates internationalization and localization in Java applications.</p>
 
 </div>
-<br><hr>
-<!--examples-->
-<div>
-    <h1 class="heading-1">Java String Programs with Explanations</h1>
+<hr>
 
-    <h2 class="heading-2">1. Concatenating Strings</h2>
-    <pre>
-        <code>
+<div>
+    <h2 id="java-string-programs-with-explanations">Java String Programs with Explanations</h2>
+
+    <h3>1. Concatenating Strings</h3>
+    <pre>        
 public class StringConcatenation {
     public static void main(String[] args) {
         // Concatenating strings using the + operator
@@ -373,13 +319,12 @@ public class StringConcatenation {
         System.out.println("Full Name: " + fullName);
     }
 }
-        </code>
+        
     </pre>
     <p><strong>Explanation:</strong> This program demonstrates the concatenation of two strings to form a full name using the + operator. The resulting full name is then displayed.</p>
 
-    <h2 class="heading-2">2. String Length</h2>
-    <pre>
-        <code>
+    <h3>2. String Length</h3>
+    <pre>        
 public class StringLength {
     public static void main(String[] args) {
         // Finding the length of a string
@@ -390,13 +335,12 @@ public class StringLength {
         System.out.println("Length of the string: " + length);
     }
 }
-        </code>
+        
     </pre>
     <p><strong>Explanation:</strong> This program calculates the length of a string using the length() method of the String class. The length is then displayed.</p>
 
-    <h2 class="heading-2">3. String Comparison</h2>
-    <pre>
-        <code>
+    <h3>3. String Comparison</h3>
+    <pre>        
 public class StringComparison {
     public static void main(String[] args) {
         // Comparing strings for equality
@@ -408,13 +352,12 @@ public class StringComparison {
         System.out.println("Are the strings equal? " + isEqual);
     }
 }
-        </code>
+        
     </pre>
     <p><strong>Explanation:</strong> This program compares two strings for equality using the equals() method. The result of the comparison is then displayed.</p>
 
-    <h2 class="heading-2">4. Substring Extraction</h2>
-    <pre>
-        <code>
+    <h3>4. Substring Extraction</h3>
+    <pre>        
 public class SubstringExample {
     public static void main(String[] args) {
         // Extracting a substring from a string
@@ -425,13 +368,12 @@ public class SubstringExample {
         System.out.println("Substring: " + substring);
     }
 }
-        </code>
+        
     </pre>
     <p><strong>Explanation:</strong> This program extracts a substring from a string using the substring() method, specifying the start and end indices. The extracted substring is then displayed.</p>
 
-    <h2 class="heading-2">5. String Splitting</h2>
-    <pre>
-        <code>
+    <h3>5. String Splitting</h3>
+    <pre>        
 public class StringSplitExample {
     public static void main(String[] args) {
         // Splitting a string into an array
@@ -445,12 +387,15 @@ public class StringSplitExample {
         }
     }
 }
-        </code>
+        
     </pre>
     <p><strong>Explanation:</strong> This program splits a sentence into an array of individual words using the split() method with a space as the delimiter. The individual words are then displayed using a loop.</p>
 
 </div>
-    </section>
-</body>
-
-</html>
+    <nav class="pager" aria-label="Lesson navigation"><a class="prev" href="java array.html"><small>← Previous</small>Java Arrays</a><a class="next" href="java string methods.html"><small>Next →</small>String Methods</a></nav></article></div>
+</main>
+<footer class="site-footer"><div class="wrap"><span>Java Learner · progress is saved in this browser only</span><nav aria-label="Footer"><a href="text.html">Lessons</a> · <a href="videos.html">Videos</a> · <a href="practice code.html">Practice</a> · <a href="quizzes.html">Quizzes</a></nav></div></footer>
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="assets/data.js"></script>
+<script src="assets/site.js"></script>
+</body></html>

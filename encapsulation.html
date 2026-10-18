@@ -1,63 +1,29 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>encapsulation</title>
-    <link rel="stylesheet" href="object.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encapsulation | Java Learner</title>
+<meta name="description" content="Hiding state behind methods">
+<script>try{var t=localStorage.getItem("jl-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}</script>
+<link rel="stylesheet" href="assets/site.css">
 </head>
-
 <body>
-    <header class="navigation-bar">
-        <nav class="nav">
-            <div class="container">
-              <h1 class="logo"><a href="#">Java Learner</a></h1>
-              <img src="images\logo.png" alt="logo">
-              <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="text.html"><i class="fa-solid fa-book"></i> Text Content</a></li>
-                <li><a href="videos.html"><i class="fa-solid fa-play"></i> Video Tutorial</a></li>
-                <li><a href="practice code.html"><i class="fa-solid fa-terminal"></i> Practice Problems</a></li>
-                <li><a href="./Compiler Java/index.php"><i class="fa-solid fa-gears" style=" color: #108a00;"></i> Compiler</a></li>
-              </ul>
-            </div>
-          </nav>
-</header>
-<section class="">
-    <div class="wrapper">
-        <input type="checkbox" id="btn" hidden>
-        <label for="btn" class="menu-btn">
-          <i class="fas fa-bars"></i>
-          <i class="fas fa-times"></i>
-        </label>
-        <nav id="sidebar">
-          <div class="title">Side Menu</div>
-          <ul class="list-items">
-            <li><a href="java basics.html">Java Basics</a></li>
-            <li><a href="ControlStatements.html">Control Statements</a></li>
-            <li><a href="java array.html">Java Array</a></li>
-            <li><a href="java strings.html">Java String</a></li>
-            <li><a href="java string methods.html">Java String Methods</a></li>
-            <li><a href="java object class.html">Java Object Class</a></li>
-            <li><a href="java inheritance.html">Java Inheritance</a></li>
-            <li><a href="java polymorphism.html">Java Polymorphism</a></li>
-            <li><a href="abstraction.html">Java Abstraction</a></li>
-            <li><a href="encapsulation.html">Java Encapsulation</a></li>
-        </ul>
-        </nav>
-      </div>
-</section>
-
-    <section class="obcontent">
-        <br> <br><br>
-        <!--encapsulation-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html"><img src="images/logo.png" alt="">Java Learner</a>
+<div class="search" role="search"><label class="skip" for="search-input">Search lessons and problems</label><input id="search-input" type="search" placeholder="Search lessons…" autocomplete="off" aria-controls="search-results" aria-expanded="false"><ul id="search-results" class="results" hidden></ul></div>
+<button id="menu-toggle" class="btn icon-btn menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">&#9776;</button>
+<nav aria-label="Main" style="display:contents"><ul id="nav-links" class="nav-links"><li><a href="index.html">Home</a></li><li><a href="text.html" aria-current="page">Lessons</a></li><li><a href="videos.html">Videos</a></li><li><a href="practice code.html">Practice</a></li><li><a href="quizzes.html">Quizzes</a></li></ul></nav>
+<button id="theme-toggle" class="btn icon-btn" aria-label="Toggle dark mode" aria-pressed="false">&#9681;</button>
+</div></header>
+<main id="main" class="wrap" data-lesson="encapsulation.html">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="text.html">Lessons</a> / <span aria-current="page">Encapsulation</span></nav><div class="lesson"><aside class="side" aria-label="Lessons"><h2>Lessons</h2><ul><li><a href="java basics.html">Java Basics</a></li><li><a href="ControlStatements.html">Control Statements</a></li><li><a href="java array.html">Java Arrays</a></li><li><a href="java strings.html">Java Strings</a></li><li><a href="java string methods.html">String Methods</a></li><li><a href="java object class.html">Classes and Objects</a></li><li><a href="java inheritance.html">Inheritance</a></li><li><a href="java polymorphism.html">Polymorphism</a></li><li><a href="abstraction.html">Abstraction</a></li><li><a href="encapsulation.html" aria-current="page">Encapsulation</a></li></ul></aside><article class="prose"><span class="badge">Advanced</span><h1>Encapsulation</h1><p class="meta">About 10 min read</p><div class="lesson-actions"><button id="btn-done" class="btn" type="button" aria-pressed="false">Mark as complete</button><button id="btn-bm" class="btn" type="button" aria-pressed="false">Bookmark</button></div>
+         
+        
         <div>
-            <h1 class="heading-1">Encapsulation in Java</h1>
+            
     
-            <h2  class="heading-2">1. Private Access Modifier:</h2>
+            <h3>1. Private Access Modifier:</h3>
         
             <p>
                 In Java, the <code>private</code> access modifier is used to restrict the visibility of a field or method to only within its own class. This ensures that the member is not accessible from outside the class, promoting encapsulation.
@@ -65,16 +31,15 @@
         
             <p>
                 Using <code>private</code> for fields:
-                <pre><code>
-        public class Person {
+                <pre>        public class Person {
             private String name;
             private int age;
             // ...
         }
-                </code></pre>
+                </pre>
             </p>
         
-            <h2  class="heading-2">2. Getter and Setter Methods:</h2>
+            <h3>2. Getter and Setter Methods:</h3>
         
             <p>
                 Getter and setter methods are used to provide controlled access to the private fields of a class. Getter methods retrieve the values of fields, and setter methods modify the values, enforcing encapsulation rules.
@@ -82,8 +47,7 @@
         
             <p>
                 Example with getter and setter methods:
-                <pre><code>
-        public class Person {
+                <pre>        public class Person {
             private String name;
             private int age;
         
@@ -111,11 +75,11 @@
                 }
             }
         }
-                </code></pre>
+                </pre>
             </p>
         
-            <h2  class="heading-2">3. Benefits of Encapsulation:</h2>
-            <div class="space">
+            <h3>3. Benefits of Encapsulation:</h3>
+            <div>
             <ul>
                 <li><strong>Controlled Access:</strong> Encapsulation ensures that the internal details of an object are not directly accessible.</li>
                 <li><strong>Flexibility and Maintenance:</strong> Changes to the internal implementation details do not affect external code, promoting flexibility.</li>
@@ -124,8 +88,8 @@
                 <li><strong>Facilitates Reusability:</strong> Provides well-defined interfaces for interacting with objects.</li>
             </ul>
             </div>
-            <h2  class="heading-2">4. Encapsulation Guidelines:</h2>
-            <div class="space">
+            <h3>4. Encapsulation Guidelines:</h3>
+            <div>
             <ul>
                 <li><strong>Minimize Accessibility:</strong> Make fields as private as possible to limit direct access.</li>
                 <li><strong>Provide Controlled Access:</strong> Use getter and setter methods to control access to private fields.</li>
@@ -135,81 +99,77 @@
             </ul>
             </div>
         </div>
-    <br> <hr>
-    <!--Access Specifiers in Encapsulation -->
-        <div>
-            <h1 class="heading-1">Access Specifiers in Encapsulation (Java)</h1>
+     <hr>
     
-            <h2  class="heading-2">1. Public (`public`):</h2>
+        <div>
+            <h2 id="access-specifiers-in-encapsulation-java">Access Specifiers in Encapsulation (Java)</h2>
+    
+            <h3>1. Public (`public`):</h3>
         
             <p>
                 The <code>public</code> access specifier allows a class, method, or field to be accessed from any other class in the same or different package.
             </p>
         
-            <pre>
-                <code>
+            <pre>                
         public class Example {
             public int publicField;
             public void publicMethod() {
                 // method implementation
             }
         }
-                </code>
+                
             </pre>
         
-            <h2  class="heading-2">2. Private (`private`):</h2>
+            <h3>2. Private (`private`):</h3>
         
             <p>
                 The <code>private</code> access specifier restricts the visibility of a class, method, or field to only within the same class. It is the most restrictive access level.
             </p>
         
-            <pre>
-                <code>
+            <pre>                
         public class Example {
             private int privateField;
             private void privateMethod() {
                 // method implementation
             }
         }
-                </code>
+                
             </pre>
         
-            <h2  class="heading-2">3. Protected (`protected`):</h2>
+            <h3>3. Protected (`protected`):</h3>
         
             <p>
                 The <code>protected</code> access specifier allows a class, method, or field to be accessed within the same package or by a subclass (even if it is in a different package).
             </p>
         
-            <pre>
-                <code>
+            <pre>                
         public class Example {
             protected int protectedField;
             protected void protectedMethod() {
                 // method implementation
             }
         }
-                </code>
+                
             </pre>
         
-            <h2  class="heading-2">4. Default (Package-Private):</h2>
+            <h3>4. Default (Package-Private):</h3>
         
             <p>
                 If no access specifier is specified, it defaults to package-private or "default" access. Members with default access are visible only within the same package.
             </p>
         
-            <pre>
-                <code>
+            <pre>                
         class Example {
             int defaultField; // package-private
             void defaultMethod() {
                 // method implementation
             }
         }
-                </code>
+                
             </pre>
         
-            <h2  class="heading-2">Encapsulation and Access Specifiers:</h2>
-            <div class="space"> 
+            <h3>Encapsulation and Access Specifiers:</h3>
+            <div> 
             <ul>
                 <li><strong>Private Access:</strong> Fields are often declared as private to encapsulate them, preventing direct access from outside the class.</li>
                 <li><strong>Public Access for Relevant Methods:</strong> Methods that are part of the public interface of a class may have a <code>public</code> access specifier to allow external classes to use them.</li>
@@ -217,16 +177,15 @@
             </ul>
             </div>
         </div>
-    <br> <hr>
+     <hr>
         
-    <!-- example -->
+    
     <div>
-        <h1 class="heading-1">Java Encapsulation Example</h1>
+        <h2 id="java-encapsulation-example">Java Encapsulation Example</h2>
     
-        <h2  class="heading-2">Step 1: Define the Person Class</h2>
+        <h3>Step 1: Define the Person Class</h3>
     
-        <pre>
-            <code>
+        <pre>            
     public class Person {
         // Step 2: Declare private fields
         private String name;
@@ -268,13 +227,12 @@
             }
         }
     }
-            </code>
+            
         </pre>
     
-        <h2  class="heading-2">Usage Example</h2>
+        <h3>Usage Example</h3>
     
-        <pre>
-            <code>
+        <pre>            
     public class Main {
         public static void main(String[] args) {
             // Step 10: Create an instance of the Person class
@@ -293,17 +251,17 @@
             System.out.println("Updated Age: " + person.getAge());
         }
     }
-            </code>
+            
         </pre>
     
-        <h2  class="heading-2">Explanation</h2>
+        <h3>Explanation</h3>
     
         <p>
             Encapsulation is a fundamental principle in object-oriented programming that involves bundling data (attributes) and methods (functions) into a single unit known as a class. The example above demonstrates encapsulation in Java through the creation of a `Person` class.
         </p>
     
-        <h2  class="heading-2">Benefits of Encapsulation</h2>
-        <div class="space">
+        <h3>Benefits of Encapsulation</h3>
+        <div>
         <ul>
             <li>
                 <strong>Controlled Access:</strong> Encapsulation ensures that the internal details of an object are not directly accessible. Access is controlled through well-defined interfaces (getter and setter methods).
@@ -324,18 +282,17 @@
         </div>
     </div>
     
-    <!--final examples-->
-    <div>
-        <h1>Encapsulation Examples in Java</h1>
     
-        <h2  class="heading-2">Example 1: Basic Encapsulation</h2>
+    <div>
+        <h2 id="encapsulation-examples-in-java">Encapsulation Examples in Java</h2>
+    
+        <h3>Example 1: Basic Encapsulation</h3>
     
         <p>
             The following Java program demonstrates basic encapsulation with a <code>Student</code> class. Private fields (<code>name</code> and <code>age</code>) are encapsulated using getter and setter methods.
         </p>
     
-        <pre>
-            <code>
+        <pre>            
     public class Student {
         private String name;
         private int age;
@@ -387,17 +344,16 @@
             System.out.println("Updated Age: " + student.getAge());
         }
     }
-            </code>
+            
         </pre>
     
-        <h2  class="heading-2">Example 2: Encapsulation with Complex Data Type</h2>
+        <h3>Example 2: Encapsulation with Complex Data Type</h3>
     
         <p>
             This Java program demonstrates encapsulation with a <code>Book</code> class. The <code>Book</code> class encapsulates the <code>title</code> and <code>author</code> fields, where <code>author</code> is an instance of the <code>Author</code> class.
         </p>
     
-        <pre>
-            <code>
+        <pre>            
     public class Book {
         private String title;
         private Author author;
@@ -461,17 +417,16 @@
             return email;
         }
     }
-            </code>
+            
         </pre>
     
-        <h2  class="heading-2">Example 3: Immutable Class</h2>
+        <h3>Example 3: Immutable Class</h3>
     
         <p>
             The following Java program demonstrates encapsulation with an immutable class, <code>ImmutablePerson</code>. The class has <code>final</code> fields and does not provide any setter methods.
         </p>
     
-        <pre>
-            <code>
+        <pre>            
     public final class ImmutablePerson {
         private final String name;
         private final int age;
@@ -492,17 +447,16 @@
             return age;
         }
     }
-            </code>
+            
         </pre>
     
-        <h2  class="heading-2">Example 4: Encapsulation with Complex Data Type and Validation</h2>
+        <h3>Example 4: Encapsulation with Complex Data Type and Validation</h3>
     
         <p>
             The <code>Library</code> class encapsulates a list of <code>Book</code> objects. It includes getter and setter methods for the library name, a getter method for the list of books (returning an unmodifiable view), and a method to add books with validation.
         </p>
     
-        <pre>
-            <code>
+        <pre>            
     public class Library {
         private String name;
         private List&lt;Book&gt; books;
@@ -578,17 +532,16 @@
             return title + " by " + author;
         }
     }
-            </code>
+            
         </pre>
     
-        <h2  class="heading-2">Example 5: Encapsulation with Modifiers</h2>
+        <h3>Example 5: Encapsulation with Modifiers</h3>
     
         <p>
             The <code>Employee</code> class demonstrates encapsulation with modifiers. It encapsulates the employee's name and salary. Getter and setter methods provide access to private fields, and a method is included to calculate the employee's bonus.
         </p>
     
-        <pre>
-            <code>
+        <pre>            
     public class Employee {
         private String name;
         private double salary;
@@ -632,17 +585,16 @@
             System.out.println("Bonus: $" + employee.calculateBonus());
         }
     }
-            </code>
+            
         </pre>
     
-        <h2  class="heading-2">Example 6: Encapsulation in a Banking System</h2>
+        <h3>Example 6: Encapsulation in a Banking System</h3>
     
         <p>
             The <code>BankAccount</code> class encapsulates the account number and balance in a simple banking system. Getter methods provide access to private fields, and methods are included for deposit and withdrawal, each with validation checks.
         </p>
     
-        <pre>
-            <code>
+        <pre>            
     public class BankAccount {
         private String accountNumber;
         private double balance;
@@ -696,11 +648,14 @@
             account.withdraw(200);
         }
     }
-            </code>
+            
         </pre>
     
     </div>
-    </section>
-</body>
-
-</html>
+    <nav class="pager" aria-label="Lesson navigation"><a class="prev" href="abstraction.html"><small>← Previous</small>Abstraction</a></nav></article></div>
+</main>
+<footer class="site-footer"><div class="wrap"><span>Java Learner · progress is saved in this browser only</span><nav aria-label="Footer"><a href="text.html">Lessons</a> · <a href="videos.html">Videos</a> · <a href="practice code.html">Practice</a> · <a href="quizzes.html">Quizzes</a></nav></div></footer>
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="assets/data.js"></script>
+<script src="assets/site.js"></script>
+</body></html>
