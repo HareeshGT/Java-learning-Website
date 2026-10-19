@@ -1,0 +1,32 @@
+From 6a65c838c25fd115e0a80b79ab5b0e22f32b5ccf Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sun, 18 Oct 2026 07:48:15 +0000
+Subject: [PATCH] Compiler page: rename stylesheet to compiler.css so stale
+ cached style.css cannot override it
+
+---
+ Compiler Java/{style.css => compiler.css} | 0
+ Compiler Java/index.php                   | 2 +-
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ rename Compiler Java/{style.css => compiler.css} (100%)
+
+diff --git a/Compiler Java/style.css b/Compiler Java/compiler.css
+similarity index 100%
+rename from Compiler Java/style.css
+rename to Compiler Java/compiler.css
+diff --git a/Compiler Java/index.php b/Compiler Java/index.php
+index 9f750c2..51716e6 100644
+--- a/Compiler Java/index.php	
++++ b/Compiler Java/index.php	
+@@ -14,7 +14,7 @@ $_SESSION['output'] = '';
+ <script>try{var t=localStorage.getItem("jl-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}</script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+ <link rel="stylesheet" href="../assets/site.css">
+-<link rel="stylesheet" href="style.css">
++<link rel="stylesheet" href="compiler.css">
+ </head>
+ <body>
+ <a class="skip" href="#main">Skip to content</a>
+-- 
+2.43.0
+

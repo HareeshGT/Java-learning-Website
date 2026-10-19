@@ -1,0 +1,4 @@
+.git
+.DS_Store
+*.patch
+node_modules

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quizzes | Java Learner</title>
+<meta name="description" content="Java knowledge quizzes.">
+<script>try{var t=localStorage.getItem("jl-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}</script>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html"><img src="images/logo.png" alt="">Java Learner</a>
+<div class="search" role="search"><label class="skip" for="search-input">Search lessons and problems</label><input id="search-input" type="search" placeholder="Search lessons…" autocomplete="off" aria-controls="search-results" aria-expanded="false"><ul id="search-results" class="results" hidden></ul></div>
+<button id="menu-toggle" class="btn icon-btn menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">&#9776;</button>
+<nav aria-label="Main" style="display:contents"><ul id="nav-links" class="nav-links"><li><a href="index.html">Home</a></li><li><a href="text.html">Lessons</a></li><li><a href="videos.html">Videos</a></li><li><a href="practice code.html">Practice</a></li><li><a href="quizzes.html" aria-current="page">Quizzes</a></li><li><a href="Compiler Java/index.php">Compiler</a></li></ul></nav>
+<button id="theme-toggle" class="btn icon-btn" aria-label="Toggle dark mode" aria-pressed="false">&#9681;</button>
+</div></header>
+<main id="main" class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Quizzes</span></nav><h1 class="page-title">Java quizzes</h1><p class="lead">Two questions per lesson with an explanation after every answer.</p><p><label for="quiz-topic">Topic </label><select id="quiz-topic"><option value="all">All lessons</option></select> <button class="btn btn-primary" id="quiz-start" type="button">Start quiz</button></p><div class="quiz" id="quiz"></div>
+</main>
+<footer class="site-footer"><div class="wrap"><span>Java Learner · progress is saved in this browser only</span><nav aria-label="Footer"><a href="text.html">Lessons</a> · <a href="videos.html">Videos</a> · <a href="practice code.html">Practice</a> · <a href="quizzes.html">Quizzes</a></nav></div></footer>
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="assets/data.js"></script>
+<script src="assets/quiz-data.js"></script>
+<script src="assets/site.js"></script>
+</body></html>

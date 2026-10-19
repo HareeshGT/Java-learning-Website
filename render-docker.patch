@@ -1,0 +1,53 @@
+From ecba77a7b61243e958eb5084c7b7b0f7a176128e Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sun, 18 Oct 2026 07:52:41 +0000
+Subject: [PATCH] Dockerfile: listen on $PORT for Render; add .dockerignore
+
+---
+ .dockerignore | 4 ++++
+ Dockerfile    | 9 +++++++--
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+ create mode 100644 .dockerignore
+
+diff --git a/.dockerignore b/.dockerignore
+new file mode 100644
+index 0000000..49bfb21
+--- /dev/null
++++ b/.dockerignore
+@@ -0,0 +1,4 @@
++.git
++.DS_Store
++*.patch
++node_modules
+diff --git a/Dockerfile b/Dockerfile
+index abc81fc..9f35312 100644
+--- a/Dockerfile
++++ b/Dockerfile
+@@ -4,11 +4,16 @@ FROM php:8.2-apache
+ # Install Java (for compiler)
+ RUN apt-get update && \
+     apt-get install -y default-jdk && \
+-    apt-get clean
++    apt-get clean && rm -rf /var/lib/apt/lists/*
+ 
+ # Enable Apache rewrite (optional)
+ RUN a2enmod rewrite
+ 
++# Listen on $PORT (Render sets it; default 10000 for local runs)
++ENV PORT=10000
++RUN sed -i 's/Listen 80$/Listen ${PORT}/' /etc/apache2/ports.conf && \
++    sed -i 's/<VirtualHost \*:80>/<VirtualHost *:${PORT}>/' /etc/apache2/sites-available/000-default.conf
++
+ # Copy all your project files
+ COPY . /var/www/html/
+ 
+@@ -19,4 +24,4 @@ RUN chown -R www-data:www-data /var/www/html
+ WORKDIR /var/www/html
+ 
+ # Expose port
+-EXPOSE 80
+\ No newline at end of file
++EXPOSE 10000
+-- 
+2.43.0
+
