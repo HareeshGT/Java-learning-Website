@@ -1,0 +1,4 @@
+
+# Local archives and macOS files
+*.zip
+.DS_Store
