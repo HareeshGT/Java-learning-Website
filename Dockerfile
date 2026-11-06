@@ -25,3 +25,8 @@ WORKDIR /var/www/html
 
 # Expose port
 EXPOSE 10000
+
+# Optional independent keep-alive process; disabled when KEEP_ALIVE_URL is unset.
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
